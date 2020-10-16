@@ -17,8 +17,7 @@
 
   <!-- Nav Item - Charts -->
   <li class="nav-item">
-    <a class="nav-link" href="#">
-        {{-- {{ route('post.index') }} --}}
+    <a class="nav-link" href="{{ route('posts.index') }}">
       <i class="fas fa-fw fa-newspaper"></i>
       <span>Artikel</span></a>
   </li>

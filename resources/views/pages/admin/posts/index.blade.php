@@ -7,7 +7,7 @@
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
       <h1 class="h3 mb-0 text-gray-800">Data Artikel</h1>
-      <a href="{{ route('post.create') }}" class="btn btn-sm btn-primary shadow-sm">
+      <a href="{{ route('posts.create') }}" class="btn btn-sm btn-primary shadow-sm">
         <i class="fas fa-plus fa-sm text-white-50"></i>
         Tambah Artikel
       </a>
@@ -38,10 +38,10 @@
                     class="img-thumbnail">
                 </td>
                 <td>
-                  <a href="{{ route('post.edit', $item->post_id) }}" class="btn btn-info">
+                  <a href="{{ route('posts.edit', $item->post_id) }}" class="btn btn-info">
                     <i class="fa fa-pencil-alt"></i>
                   </a>
-                  <form action="{{ route('post.destroy', $item->post_id) }}" method="POST"
+                  <form action="{{ route('posts.destroy', $item->post_id) }}" method="POST"
                     class="d-inline">
                     @csrf
                     @method('delete')
