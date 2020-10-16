@@ -61,7 +61,7 @@
 
                         <div class="top-meta-data d-flex align-items-center">
                             <!-- Login -->
-                            <a href="#" class="login-btn"><i class="fa fa-user" aria-hidden="true"></i></a>
+                            <a href="{{ route('login') }}" class="login-btn"><i class="fa fa-user" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </nav>

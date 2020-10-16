@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +26,19 @@ Route::get('/contact', 'ContactController@index')
 
 Route::get('/berita', 'BeritaController@index')
     ->name('berita');
+
+Route::prefix('admin')
+        ->middleware('auth')
+        ->namespace('Admin')
+        ->group(function(){
+          Route::get('/', 'DashboardController@index')
+        ->name('dashboard');
+
+        //   Route::resource('post', PostController::class);
+        //   Route::resource('messages', MessageController::class);
+        //   Route::resource('cabang-olahraga', CabangOlahragaController::class);
+        //   Route::resource('players', PlayerController::class);
+        //   Route::resource('coachs', CoachController::class);
+});
+
+Auth::routes();
