@@ -34,7 +34,7 @@ Route::prefix('admin')
           Route::get('/', 'DashboardController@index')
         ->name('dashboard');
 
-        //   Route::resource('post', PostController::class);
+          Route::resource('posts', PostController::class);
         //   Route::resource('messages', MessageController::class);
         //   Route::resource('cabang-olahraga', CabangOlahragaController::class);
         //   Route::resource('players', PlayerController::class);

@@ -1,4 +1,5 @@
 @extends('layouts.default')
+@section('title', 'Login')
 
 @section('content')
 <!-- ##### Breadcrumb Area Start ##### -->
@@ -26,7 +27,8 @@
                             <h5>Login</h5>
                         </div>
 
-                        <form action="index.html" method="post">
+                        <form action="{{ route('login') }}" method="post">
+                            @csrf
                             <div class="form-group">
                                 <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email or User Name">
                                 @error('email')
