@@ -1,4 +1,5 @@
 @extends('layouts.default')
+@section('title', 'Jadwal Latihan')
 
 @section('content')
 <!-- ##### Breadcrumb Area Start ##### -->
@@ -23,7 +24,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i>
-                                    Home</a></li>
+                            Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Jadwal</li>
                         </ol>
                     </nav>
@@ -49,116 +50,6 @@
                             </ul>
                         </div>
                         @endforeach
-
-                        {{-- <button class="accordion">JADWAL LATIHAN BULU TANGKIS</button>
-                        <div class="panel">
-                            <ul>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                            </ul>
-                        </div>
-
-                        <button class="accordion">JADWAL LATIHAN TENIS MEJA</button>
-                        <div class="panel">
-                            <ul>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                            </ul>
-                        </div>
-
-                        <button class="accordion">JADWAL LATIHAN RENANG</button>
-                        <div class="panel">
-                            <ul>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                            </ul>
-                        </div>
-
-                        <button class="accordion">JADWAL LATIHAN PANAHAN</button>
-                        <div class="panel">
-                            <ul>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                            </ul>
-                        </div>
-
-                        <button class="accordion">JADWAL LATIHAN JUDO</button>
-                        <div class="panel">
-                            <ul>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                            </ul>
-                        </div>
-
-                        <button class="accordion">JADWAL LATIHAN MENEMBAK</button>
-                        <div class="panel">
-                            <ul>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                            </ul>
-                        </div>
-
-                        <button class="accordion">JADWAL LATIHAN GOALBALL</button>
-                        <div class="panel">
-                            <ul>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                            </ul>
-                        </div>
-
-                        <button class="accordion">JADWAL LATIHAN TENIS LAPANG</button>
-                        <div class="panel">
-                            <ul>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                            </ul>
-                        </div>
-
-                        <button class="accordion">JADWAL LATIHAN VOLI DUDUK</button>
-                        <div class="panel">
-                            <ul>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                            </ul>
-                        </div>
-
-                        <button class="accordion">JADWAL LATIHAN BALAP SEPEDA</button>
-                        <div class="panel">
-                            <ul>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                            </ul>
-                        </div>
-
-                        <button class="accordion">JADWAL LATIHAN ANGKAT BERAT</button>
-                        <div class="panel">
-                            <ul>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                            </ul>
-                        </div> --}}
                     </div>
                 </div>
 
