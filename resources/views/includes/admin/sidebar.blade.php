@@ -35,8 +35,7 @@
   </li>
 
   <li class="nav-item">
-    <a class="nav-link" href="#">
-        {{-- {{ route('players.index') }} --}}
+    <a class="nav-link" href="{{ route('players.index') }}">
       <i class="fas fa-fw fa-users"></i>
       <span>Pemain</span></a>
   </li>

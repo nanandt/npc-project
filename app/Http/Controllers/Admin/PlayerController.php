@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\CabangOlahraga;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PlayerRequest;
+use App\Pemain;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PlayerController extends Controller
 {
@@ -14,7 +18,23 @@ class PlayerController extends Controller
      */
     public function index()
     {
-        //
+        $items = Pemain::with('cabang_olahraga')->get();
+        return view('pages.admin.players.index',[
+            'items' => $items
+        ]);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $cabors = CabangOlahraga::all();
+        return view('pages.admin.players.create',[
+            'cabors' => $cabors
+        ]);
     }
 
     /**
@@ -23,9 +43,18 @@ class PlayerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PlayerRequest $request)
     {
-        //
+        $data = $request->all();
+        $data['thumbnail'] = $request->file('thumbnail')->store(
+            'assets/player', 'public'
+        );
+
+        Pemain::create($data);
+
+        Alert::success('Selamat', 'Data Berhasil Ditambahkan');
+
+        return redirect()->route('players.index');
     }
 
     /**
@@ -40,6 +69,24 @@ class PlayerController extends Controller
     }
 
     /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $item = Pemain::findOrFail($id);
+        $cabors = CabangOlahraga::all();
+
+        return view('pages.admin.players.edit', [
+            'item' => $item,
+            'cabors' => $cabors
+        ]);
+    }
+
+
+    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -48,7 +95,17 @@ class PlayerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+
+        $data['thumbnail'] = $request->file('thumbnail')->store('assets/player', 'public');
+
+        $item = Pemain::findOrFail($id);
+
+        $item->update($data);
+
+        Alert::info('Selamat', 'Data Berhasil Diedit');
+
+        return redirect()->route('players.index');
     }
 
     /**
@@ -59,6 +116,12 @@ class PlayerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Pemain::find($id);
+
+        $item->delete();
+
+        Alert::success('Selamat', 'Data Berhasil Dihapus');
+
+        return redirect()->route('players.index');
     }
 }
