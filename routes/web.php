@@ -40,7 +40,7 @@ Route::prefix('admin')
           Route::resource('messages', MessageController::class);
           Route::resource('cabang-olahraga', CabangOlahragaController::class);
           Route::resource('players', PlayerController::class);
-        //   Route::resource('coachs', CoachController::class);
+          Route::resource('coachs', CoachController::class);
 });
 
 Auth::routes();

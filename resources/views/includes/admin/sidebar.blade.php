@@ -40,8 +40,7 @@
       <span>Pemain</span></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">
-        {{-- {{ route('coachs.index') }} --}}
+    <a class="nav-link" href="{{ route('coachs.index') }}">
       <i class="fas fa-fw fa-user"></i>
       <span>Pelatih</span></a>
   </li>
