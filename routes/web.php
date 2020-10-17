@@ -36,7 +36,7 @@ Route::prefix('admin')
 
           Route::resource('posts', PostController::class);
         //   Route::resource('messages', MessageController::class);
-        //   Route::resource('cabang-olahraga', CabangOlahragaController::class);
+          Route::resource('cabang-olahraga', CabangOlahragaController::class);
         //   Route::resource('players', PlayerController::class);
         //   Route::resource('coachs', CoachController::class);
 });

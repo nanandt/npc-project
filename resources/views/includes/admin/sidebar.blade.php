@@ -30,8 +30,7 @@
   </li>
 
   <li class="nav-item">
-    <a class="nav-link" href="#">
-        {{-- {{ route('cabang-olahraga.index') }} --}}
+    <a class="nav-link" href="{{ route('cabang-olahraga.index') }}">
       <i class="fas fa-fw fa-trophy"></i>
       <span>Cabang Olahraga</span></a>
   </li>
