@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\CabangOlahraga;
 use Illuminate\Http\Request;
 
 class JadwalController extends Controller
 {
     public function index()
     {
-        return view('pages.jadwal');
+        $cabors = CabangOlahraga::all();
+        return view('pages.jadwal', [
+            'cabors' => $cabors
+        ]);
     }
 }

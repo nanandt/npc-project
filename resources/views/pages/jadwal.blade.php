@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- ##### Breadcrumb Area Start ##### -->
-    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/40.jpg);">
+    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url({{ 'frontend/img/bg-img/40.jpg' }});">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -40,28 +40,17 @@
                 <div class="col-12 col-xl-8">
                     <!-- About Us Content -->
                     <div class="about-us-content bg-white mb-30 p-30 box-shadow">
-                        <!-- Jadwal Latihan -->
-                        <button class="accordion">JADWAL LATIHAN ATLETIK</button>
+                        @foreach ($cabors as $cabor)
+
+                        <button class="accordion">JADWAL LATIHAN {{ $cabor->nama_cabor }}</button>
                         <div class="panel">
                             <ul>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
+                                <li><i class="fa fa-check"></i>{{ \Carbon\carbon::create($cabor->jadwal_latihan)->format('d F, Y') }} - {{ $cabor->tempat_latihan }}</li>
                             </ul>
                         </div>
+                        @endforeach
 
-                        <button class="accordion">JADWAL LATIHAN CATUR</button>
-                        <div class="panel">
-                            <ul>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                                <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
-                            </ul>
-                        </div>
-
-                        <button class="accordion">JADWAL LATIHAN BULU TANGKIS</button>
+                        {{-- <button class="accordion">JADWAL LATIHAN BULU TANGKIS</button>
                         <div class="panel">
                             <ul>
                                 <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
@@ -169,7 +158,7 @@
                                 <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
                                 <li><i class="fa fa-check"></i> 10 September 2020 - GOR1</li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
 

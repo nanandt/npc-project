@@ -5,7 +5,7 @@
 
   <!-- Page Heading -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Tambah Artikel</h1>
+    <h1 class="h3 mb-0 text-gray-800">Tambah Cabang Olahraga</h1>
   </div>
 
   <div class="card shadow">
@@ -16,6 +16,26 @@
           <label for="nama_cabor">Nama Cabang Olahraga</label>
           <input type="text" class="form-control @error('nama_cabor') is-invalid @enderror" name="nama_cabor" placeholder="Cabang Olaraga" value="{{ old('nama_cabor') }}">
           @error('nama_cabor')
+          <div class="invalid-feedback">
+            {{ $message }}
+            </div>
+          @enderror
+        </div>
+
+        <div class="form-group">
+          <label for="jadwal_latihan">Jadwal Latihan</label>
+          <input type="date" class="form-control @error('jadwal_latihan') is-invalid @enderror" name="jadwal_latihan" placeholder="Jadwal Latihan" value="{{ old('jadwal_latihan') }}">
+          @error('jadwal_latihan')
+          <div class="invalid-feedback">
+              {{ $message }}
+              </div>
+          @enderror
+        </div>
+
+        <div class="form-group">
+          <label for="tempat_latihan">Tempat Latihan</label>
+          <input type="text" class="form-control @error('tempat_latihan') is-invalid @enderror" name="tempat_latihan" placeholder="Tempat Latihan" value="{{ old('tempat_latihan') }}">
+          @error('tempat_latihan')
           <div class="invalid-feedback">
             {{ $message }}
             </div>

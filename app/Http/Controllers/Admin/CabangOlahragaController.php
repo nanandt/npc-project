@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\CabangOlahraga;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CaborRequest;
 use App\Pelatih;
 use App\Pemain;
 use Illuminate\Http\Request;
@@ -41,14 +42,9 @@ class CabangOlahragaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CaborRequest $request)
     {
-        $request->validate([
-        'nama_cabor' => 'required'
-      ]);
-
       $data = $request->all();
-
       CabangOlahraga::create($data);
 
       Alert::success('Selamat', 'Data Berhasil Ditambahkan');
