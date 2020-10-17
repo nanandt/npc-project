@@ -81,7 +81,7 @@
                             </div>
                             <div class="text">
                                 <p>Phone:</p>
-                                <h6>-</h6>
+                                <h6>08986392736</h6>
                             </div>
                         </div>
                     </div>

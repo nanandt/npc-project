@@ -23,6 +23,8 @@ Route::get('/about', 'AboutController@index')
 
 Route::get('/contact', 'ContactController@index')
     ->name('contact');
+Route::post('/contact', 'ContactController@create')
+        ->name('contact-create');
 
 Route::get('/berita', 'BeritaController@index')
     ->name('berita');
@@ -35,7 +37,7 @@ Route::prefix('admin')
         ->name('dashboard');
 
           Route::resource('posts', PostController::class);
-        //   Route::resource('messages', MessageController::class);
+          Route::resource('messages', MessageController::class);
           Route::resource('cabang-olahraga', CabangOlahragaController::class);
         //   Route::resource('players', PlayerController::class);
         //   Route::resource('coachs', CoachController::class);

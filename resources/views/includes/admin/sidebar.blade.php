@@ -23,8 +23,7 @@
   </li>
 
   <li class="nav-item">
-    <a class="nav-link" href="#">
-        {{-- {{ route('messages.index') }} --}}
+    <a class="nav-link" href="{{ route('messages.index') }}">
       <i class="fas fa-fw fa-comment-dots"></i>
       <span>Pesan</span></a>
   </li>
