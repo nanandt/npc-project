@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\CabangOlahraga;
 use App\Message;
 use Illuminate\Http\Request;
 
@@ -9,7 +10,10 @@ class ContactController extends Controller
 {
     public function index()
     {
-        return view('pages.contact');
+        $cabors = CabangOlahraga::with('pemains', 'pelatihs')->get();
+        return view('pages.contact', [
+            'cabors' => $cabors
+        ]);
     }
 
     public function create(Request $request)

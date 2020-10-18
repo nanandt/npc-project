@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\CabangOlahraga;
-use App\Pemain;
+use App\{CabangOlahraga, Pemain};
 use Illuminate\Http\Request;
 
 class PemainController extends Controller
