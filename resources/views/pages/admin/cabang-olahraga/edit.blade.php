@@ -14,9 +14,29 @@
         @method('PUT')
         @csrf
         <div class="form-group">
-          <label for="nama_cabor">Nama</label>
+          <label for="nama_cabor">Nama Cabang Olahraga</label>
           <input type="text" class="form-control @error('nama_cabor') is-invalid @enderror" name="nama_cabor" value="{{ $item->nama_cabor }}">
           @error('nama_cabor')
+          <div class="invalid-feedback">
+            {{ $message }}
+            </div>
+          @enderror
+        </div>
+
+        <div class="form-group">
+          <label for="jadwal_latihan">Jadwal Latihan</label>
+          <input type="date" class="form-control @error('jadwal_latihan') is-invalid @enderror" name="jadwal_latihan" placeholder="Jadwal Latihan" value="{{ $item->jadwal_latihan }}">
+          @error('jadwal_latihan')
+          <div class="invalid-feedback">
+              {{ $message }}
+              </div>
+          @enderror
+        </div>
+
+        <div class="form-group">
+          <label for="tempat_latihan">Tempat Latihan</label>
+          <input type="text" class="form-control @error('tempat_latihan') is-invalid @enderror" name="tempat_latihan" value="{{ $item->tempat_latihan }}">
+          @error('tempat_latihan')
           <div class="invalid-feedback">
             {{ $message }}
             </div>
