@@ -30,7 +30,7 @@
                                     <li class="nav-item {{ request()->is('/') ? ' active' : '' }}">
                                         <a class="nav-link" href="{{ route('home') }}">Home</a>
                                     </li>
-                                    {{-- <li class="nav-item"><a class="nav-link" href="#">Cabang Olahraga</a>
+                                    <li class="nav-item"><a class="nav-link" href="#">Cabang Olahraga</a>
 
                                         <ul class="dropdown">
                                              @foreach ($cabors as $cabor)
@@ -43,7 +43,7 @@
                                             </li>
                                             @endforeach
                                         </ul>
-                                    </li> --}}
+                                    </li>
                                     <li class="nav-item"><a class="nav-link" href="#">Galeri</a>
                                         <ul class="dropdown">
                                             <li><a href="foto.html">FOTO</a></li>

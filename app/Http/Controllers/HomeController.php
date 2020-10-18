@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\{CabangOlahraga, Post};
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,8 +13,20 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('pages.home');
+        $cabors = CabangOlahraga::with('pemains', 'pelatihs')->get();
+
+        $lates = Post::latest()->skip(5)->take(5)->get();
+
+        $randoms = Post::inRandomOrder()->take(5)->get();
+
+        $items = Post::latest()->limit(5)->get();
+        return view('pages.home', [
+            'items' => $items,
+            'lates' => $lates,
+            'randoms' => $randoms,
+            'cabors' => $cabors
+        ]);
     }
 }
