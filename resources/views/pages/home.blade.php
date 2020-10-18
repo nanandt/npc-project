@@ -69,7 +69,7 @@
                 <h5>BERITA TERBARU</h5>
             </div>
             <!-- Single Blog Post -->
-            {{-- @foreach ($items as $item)
+            @foreach ($items as $item)
             <div class="single-blog-post d-flex">
                 <div class="post-thumbnail">
                     <img src="{{ $item->photo ? Storage::url($item->photo) : '' }}">
@@ -78,7 +78,7 @@
                     <a href="{{ route('artikel', $item->slug) }}" class="post-title">{{ $item->title }}</a>
                 </div>
             </div>
-            @endforeach --}}
+            @endforeach
         </div>
     </div>
 
@@ -124,7 +124,7 @@
                         <div class="featured-video-posts-slide owl-carousel">
 
                             <div class="single--slide">
-                                {{-- @foreach ($lates as $late)
+                                @foreach ($lates as $late)
                                 <!-- Single Blog Post -->
                                 <div class="single-blog-post d-flex style-3">
                                     <div class="post-thumbnail">
@@ -134,11 +134,11 @@
                                         <a href="{{route('artikel', $late->slug)}}" class="post-title">{{ $late->title }}</a>
                                     </div>
                                 </div>
-                                @endforeach --}}
+                                @endforeach
                             </div>
 
                             <div class="single--slide">
-                                {{-- @foreach ($randoms as $random)
+                                @foreach ($randoms as $random)
                                 <!-- Single Blog Post -->
                                 <div class="single-blog-post d-flex style-3">
                                     <div class="post-thumbnail">
@@ -148,7 +148,7 @@
                                         <a href="{{route('artikel', $random->slug)}}" class="post-title">{{ ($random->title) }}</a>
                                     </div>
                                 </div>
-                                @endforeach --}}
+                                @endforeach
                             </div>
                         </div>
                     </div>

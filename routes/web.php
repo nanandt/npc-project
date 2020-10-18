@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index')
     ->name('home');
 
+Route::get('/artikel/{slug}', 'ArtikelController@index')
+                ->name('artikel');
+
 Route::get('/cabang-olahraga/{cabang_olahraga_id}/pemain', 'PemainController@index')
                 ->name('cabor-pemain');
 
