@@ -51,7 +51,7 @@
                         <h4 class="post-title">{{ $item->title }}</h4>
 
                         <p>
-                            {{ $item->body }}
+                            {!! $item->body !!}
                         </p>
 
                         <!-- Like Dislike Share -->

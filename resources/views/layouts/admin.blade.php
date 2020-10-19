@@ -71,6 +71,7 @@
   </div>
 
   @include('includes.admin.script')
+  @stack('after-script')
 
   @include('sweetalert::alert')
 

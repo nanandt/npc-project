@@ -34,7 +34,7 @@
 
         <div class="form-group">
           <label for="body">Body</label>
-          <textarea type="text" rows="10" class="form-control @error('body') is-invalid @enderror" name="body" placeholder="Body" value="{{ old('body') }}"></textarea>
+          <textarea id="konten" type="text" rows="10" cols="50" class="form-control @error('body') is-invalid @enderror" name="body" placeholder="Body" value="{{ old('body') }}"></textarea>
           @error('body')
           <div class="invalid-feedback">
             {{ $message }}
@@ -51,3 +51,13 @@
 </div>
 <!-- /.container-fluid -->
 @endsection
+@push('after-script')
+<script>
+    var konten = document.getElementById("konten");
+    CKEDITOR.replace('konten',{
+        language: 'en-gb'
+    });
+    CKEDITOR.config.allowedContent = true
+</script>
+@endpush
+
