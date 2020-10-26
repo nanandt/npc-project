@@ -44,6 +44,16 @@
                     @enderror
                 </div>
 
+                <div class="form-group">
+                    <label for="prestasi">Prestasi</label>
+                    <input type="text" class="form-control @error('prestasi') is-invalid @enderror" name="prestasi" placeholder="Prestasi" value="{{ old('prestasi') }}">
+                    @error('prestasi')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+
                 <button type="submit" class="btn btn-primary btn-block">
                     Simpan
                 </button>

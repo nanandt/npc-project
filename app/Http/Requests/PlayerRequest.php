@@ -26,7 +26,8 @@ class PlayerRequest extends FormRequest
         return [
             'cabang_olahraga_id' => 'required|integer|exists:cabang_olahragas,cabang_olahraga_id',
             'nama_pemain' => 'required',
-            'thumbnail' => 'required|image|mimes:jpeg,png,jpg|max:2048'
+            'thumbnail' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'prestasi' => 'required'
         ];
     }
 }

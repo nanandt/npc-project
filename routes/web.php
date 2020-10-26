@@ -20,6 +20,8 @@ Route::get('/artikel/{slug}', 'ArtikelController@index')
 
 Route::get('/cabang-olahraga/{cabang_olahraga_id}/pemain', 'PemainController@index')
                 ->name('cabor-pemain');
+Route::get('/cabang-olahraga/profile-pemain/{pemain_id}', 'ProfilPemainController@index')
+                ->name('profile-pemain');
 
 Route::get('/cabang-olahraga/{cabang_olahraga_id}/pelatih', 'PelatihController@index')
                 ->name('cabor-pelatih');

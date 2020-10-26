@@ -9,7 +9,7 @@ class Pemain extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['cabang_olahraga_id', 'nama_pemain', 'thumbnail'];
+    protected $fillable = ['cabang_olahraga_id', 'nama_pemain', 'thumbnail', 'prestasi'];
 
     protected $primaryKey = 'pemain_id';
 
