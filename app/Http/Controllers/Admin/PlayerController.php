@@ -46,11 +46,20 @@ class PlayerController extends Controller
     public function store(PlayerRequest $request)
     {
         $data = $request->all();
+        // dd($data);
         $data['thumbnail'] = $request->file('thumbnail')->store(
             'assets/player', 'public'
         );
 
-        Pemain::create($data);
+        if(count($request->prestasi) > 0){
+            foreach ($request->prestasi as $item => $value) {
+                $data2 = array(
+                    'prestasi' => $request->prestasi[$item]
+                );
+                Pemain::create($data2);
+            }
+        }
+
 
         Alert::success('Selamat', 'Data Berhasil Ditambahkan');
 
@@ -93,7 +102,7 @@ class PlayerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PlayerRequest $request, $id)
     {
         $data = $request->all();
 

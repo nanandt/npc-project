@@ -46,13 +46,16 @@
 
                 <div class="form-group">
                     <label for="prestasi">Prestasi</label>
-                    <input type="text" class="form-control @error('prestasi') is-invalid @enderror" name="prestasi" placeholder="Prestasi" value="{{ old('prestasi') }}">
+                    <i class="addPrestasi fas fa-plus fa-sm" style="float: right"></i>
+                    <input type="text" class="form-control @error('prestasi') is-invalid @enderror" name="prestasi[]" placeholder="Prestasi" value="{{ old('prestasi') }}">
                     @error('prestasi')
                     <div class="invalid-feedback">
                     {{ $message }}
                     </div>
                     @enderror
                 </div>
+
+                <div class="prestasi"></div>
 
                 <button type="submit" class="btn btn-primary btn-block">
                     Simpan
@@ -64,3 +67,28 @@
     <!-- /.container-fluid -->
     {{-- fungsi old adlh jika user salah input data, data tsb tidak hilang --}}
 @endsection
+
+@push('after-script')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript">
+    $('.addPrestasi').on('click', function(){
+        addPrestasi();
+    });
+    function addPrestasi(){
+        var prestasi = `<div><div class="form-group">
+                    <label for="prestasi">Prestasi</label>
+                    <i class="remove fas fa-minus fa-sm" style="float: right"></i>
+                    <input type="text" class="form-control @error('prestasi') is-invalid @enderror" name="prestasi[]" placeholder="Prestasi" value="{{ old('prestasi') }}">
+                    @error('prestasi')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div></div>`;
+        $('.prestasi').append(prestasi);
+    };
+    $('.remove').live('click', function(){
+        $(this).parent().parent().remove();
+    });
+</script>
+@endpush

@@ -2,19 +2,6 @@
 @section('title', 'Profile Pemain')
 
 @section('content')
-<!-- ##### Breadcrumb Area Start ##### -->
-{{-- <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url({{ 'frontend/img/bg-img/49.jpg' }});">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center">
-            <div class="col-12">
-                <div class="breadcrumb-content">
-                    <h2>Profil</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
-<!-- ##### Breadcrumb Area End ##### -->
 
 <!-- ##### Breadcrumb Area Start ##### -->
 <div class="mag-breadcrumb py-5">
