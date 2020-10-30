@@ -39,10 +39,9 @@
                         <div class="row">
                             <div class="col-12 col-lg-8">
                                 <ul>
-                                    <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> {{ $item->prestasi }}</li>
-                                    <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Etiam vel auctor elit. Usaceros suscipit, lobortis felis non.</li>
-                                    <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Integer sagittis finibus nequer, euster tincidunt misult.</li>
-                                    <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Pellentesque euismod semeget diam ege</li>
+                                    @foreach ($items->detail_pemain as $item)
+                                        <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> {{ $item->prestasi }}</li>
+                                    @endforeach
                                 </ul>
                             </div>
                             <div class="col-12 col-lg-4">
@@ -100,7 +99,7 @@
                         <ul class="catagory-widgets">
                             <li>Tempat/Tgl. Lahir : 35</li>
                             <br>
-                            <li>Email : @gmail.com</li>
+                            <li>Email : {{ $items->nama_pemain }}</li>
                             <br>
                             <li>Tahun Bergabung : -</li>
                             <br>
