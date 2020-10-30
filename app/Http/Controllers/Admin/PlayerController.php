@@ -51,6 +51,8 @@ class PlayerController extends Controller
 
         $data = new Pemain;
         $data->nama_pemain = $request['nama_pemain'];
+        $data->email = $request['email'];
+        $data->tahun_bergabung = $request['tahun_bergabung'];
         $data->cabang_olahraga_id = $request['cabang_olahraga_id'];
         $data['thumbnail'] = $request->file('thumbnail')->store(
             'assets/player', 'public'

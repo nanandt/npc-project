@@ -21,6 +21,8 @@
                 <tr>
                     <th>ID</th>
                     <th>Nama Pemain</th>
+                    <th>Email</th>
+                    <th>Tahun Bergabung</th>
                     <th>Cabang Olahraga</th>
                     <th>Foto</th>
                     <th>Action</th>
@@ -32,6 +34,8 @@
                 <tr>
                     <td>{{ $item->pemain_id }}</td>
                     <td>{{ $item->nama_pemain }}</td>
+                    <td>{{ $item->email }}</td>
+                    <td>{{ $item->tahun_bergabung }}</td>
                     <td>{{ $item->cabang_olahraga->nama_cabor }}</td>
                     <td>
                     <img src="{{ Storage::url($item->thumbnail) }}" style="width:150px"

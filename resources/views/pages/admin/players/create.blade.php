@@ -21,6 +21,24 @@
                     </div>
                     @enderror
                 </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{ old('email') }}">
+                    @error('email')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+                <div class="form-group">
+                    <label for="tahun_bergabung">Tahun Bergabung</label>
+                    <input type="number" class="form-control @error('tahun_bergabung') is-invalid @enderror" name="tahun_bergabung" placeholder="Tahun Bergabung" value="{{ old('tahun_bergabung') }}">
+                    @error('tahun_bergabung')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div>
 
                 <div class="form-group">
                     <label for="cabang_olahraga_id">Cabang Olahraga</label>

@@ -99,9 +99,9 @@
                         <ul class="catagory-widgets">
                             <li>Tempat/Tgl. Lahir : 35</li>
                             <br>
-                            <li>Email : {{ $items->nama_pemain }}</li>
+                            <li>Email : {{ $items->email }}</li>
                             <br>
-                            <li>Tahun Bergabung : -</li>
+                            <li>Tahun Bergabung : {{ $items->tahun_bergabung }}</li>
                             <br>
                             <li>Bagaimana mengawali karir atletik : -</li>
                         </ul>
