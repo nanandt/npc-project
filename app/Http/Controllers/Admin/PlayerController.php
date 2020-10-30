@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\CabangOlahraga;
+use App\DetailPemain;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PlayerRequest;
 use App\Pemain;
@@ -47,19 +48,28 @@ class PlayerController extends Controller
     {
         $data = $request->all();
         // dd($data);
+
+        $data = new Pemain;
+        $data->nama_pemain = $request['nama_pemain'];
+        $data->cabang_olahraga_id = $request['cabang_olahraga_id'];
         $data['thumbnail'] = $request->file('thumbnail')->store(
             'assets/player', 'public'
         );
+        $data->save();
 
-        if(count($request->prestasi) > 0){
-            foreach ($request->prestasi as $item => $value) {
+        // $detailpemain = New DetailPemain;
+        // $detailpemain->pemain_id = $data->pemain_id;
+        // $detailpemain->prestasi = $request['prestasi'];
+        // $detailpemain->save();
+        if(count($request['prestasi'] > 0)){
+            foreach($request['prestasi']  as $item => $v){
                 $data2 = array(
-                    'prestasi' => $request->prestasi[$item]
+                    'pemain_id' => $data->pemain_id,
+                    'prestasi' => $request['prestasi'][$item]
                 );
-                Pemain::create($data2);
+                DetailPemain::create($data2);
             }
         }
-
 
         Alert::success('Selamat', 'Data Berhasil Ditambahkan');
 

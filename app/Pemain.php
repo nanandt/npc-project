@@ -17,4 +17,8 @@ class Pemain extends Model
     {
         return $this->belongsTo(CabangOlahraga::class, 'cabang_olahraga_id');
     }
+    public function detail_pemain()
+    {
+        return $this->hasMany(DetailPemain::class, 'pemain_id');
+    }
 }

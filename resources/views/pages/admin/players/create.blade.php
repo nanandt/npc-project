@@ -78,7 +78,7 @@
         var prestasi = `<div><div class="form-group">
                     <label for="prestasi">Prestasi</label>
                     <i class="remove fas fa-minus fa-sm" style="float: right"></i>
-                    <input type="text" class="form-control @error('prestasi') is-invalid @enderror" name="prestasi[]" placeholder="Prestasi" value="{{ old('prestasi') }}">
+                    <input type="text" class="form-control @error('prestasi') is-invalid @enderror" name="prestasi[]" placeholder="Prestasi">
                     @error('prestasi')
                     <div class="invalid-feedback">
                     {{ $message }}
