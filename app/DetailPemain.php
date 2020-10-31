@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class DetailPemain extends Model
 {
-    protected $fillable = ['pemain_id', 'prestasi'];
+    protected $fillable = ['pemain_id', 'prestasi', 'pertandingan_mengesankan'];
 }

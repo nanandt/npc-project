@@ -75,6 +75,19 @@
 
                 <div class="prestasi"></div>
 
+                <div class="form-group">
+                    <label for="pertandingan_mengesankan">Pertandingan Mengesankan</label>
+                    <i class="addPmengesankan fas fa-plus fa-sm" style="float: right"></i>
+                    <input type="text" class="form-control @error('pertandingan_mengesankan') is-invalid @enderror" name="pertandingan_mengesankan[]" placeholder="Pertandingan Mengesankan" value="{{ old('pertandingan_mengesankan') }}">
+                    @error('pertandingan_mengesankan')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+
+                <div class="mengesankan"></div>
+
                 <button type="submit" class="btn btn-primary btn-block">
                     Simpan
                 </button>
@@ -104,6 +117,22 @@
                     @enderror
                 </div></div>`;
         $('.prestasi').append(prestasi);
+    };
+    $('.addPmengesankan').on('click', function(){
+        addPmengesankan();
+    });
+    function addPmengesankan(){
+        var mengesankan = `<div><div class="form-group">
+                    <label for="pertandingan_mengesankan">Pertandingan Mengesankan</label>
+                    <i class="remove fas fa-minus fa-sm" style="float: right"></i>
+                    <input type="text" class="form-control @error('pertandingan_mengesankan') is-invalid @enderror" name="pertandingan_mengesankan[]" placeholder="Pertandigan Mengesankan">
+                    @error('pertandingan_mengesankan')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div></div>`;
+        $('.mengesankan').append(mengesankan);
     };
     $('.remove').live('click', function(){
         $(this).parent().parent().remove();

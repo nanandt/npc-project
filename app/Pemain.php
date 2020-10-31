@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\CabangOlahraga;
+use App\DetailPemain;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 

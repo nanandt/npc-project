@@ -54,7 +54,9 @@
                         </div>
                                 <ul>
                                     <li><strong>Pertandingan Paling Mengesankan :</strong></li>
-                                    <p>-</p>
+                                    @foreach ($items->detail_pemain as $item)
+                                    <p>-{{ $item->pertandingan_mengesankan }}</p>
+                                    @endforeach
                                     <li><strong>Pertandingan Paling Mengecewakan :</strong></li>
                                     <p>-</p>
                                     <li><strong>Lawan Paling Tangguh :</strong></li>

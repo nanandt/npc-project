@@ -64,10 +64,11 @@ class PlayerController extends Controller
         // $detailpemain->prestasi = $request['prestasi'];
         // $detailpemain->save();
         if(count($request['prestasi'] > 0)){
-            foreach($request['prestasi']  as $item => $v){
+            foreach($request['prestasi'] as $item => $v){
                 $data2 = array(
                     'pemain_id' => $data->pemain_id,
-                    'prestasi' => $request['prestasi'][$item]
+                    'prestasi' => $request['prestasi'][$item],
+                    'pertandingan_mengesankan' => $request['pertandingan_mengesankan'][$item]
                 );
                 DetailPemain::create($data2);
             }
