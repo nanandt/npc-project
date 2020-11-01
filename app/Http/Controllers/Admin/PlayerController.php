@@ -68,7 +68,10 @@ class PlayerController extends Controller
                 $data2 = array(
                     'pemain_id' => $data->pemain_id,
                     'prestasi' => $request['prestasi'][$item],
-                    'pertandingan_mengesankan' => $request['pertandingan_mengesankan'][$item]
+                    'pertandingan_mengesankan' => $request['pertandingan_mengesankan'][$item],
+                    'pertandingan_mengecewakan' => $request['pertandingan_mengecewakan'][$item],
+                    'lawan_tangguh' => $request['lawan_tangguh'][$item],
+                    'rekan_berlatih' => $request['rekan_berlatih'][$item]
                 );
                 DetailPemain::create($data2);
             }

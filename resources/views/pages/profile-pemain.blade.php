@@ -57,12 +57,21 @@
                                     @foreach ($items->detail_pemain as $item)
                                     <p>-{{ $item->pertandingan_mengesankan }}</p>
                                     @endforeach
+
                                     <li><strong>Pertandingan Paling Mengecewakan :</strong></li>
-                                    <p>-</p>
+                                    @foreach ($items->detail_pemain as $item)
+                                    <p>-{{ $item->pertandingan_mengecewakan }}</p>
+                                    @endforeach
+
                                     <li><strong>Lawan Paling Tangguh :</strong></li>
-                                    <p>-</p>
+                                    @foreach ($items->detail_pemain as $item)
+                                    <p>-{{ $item->lawan_tangguh }}</p>
+                                    @endforeach
+
                                     <li><strong>Rekan Berlatih Favorit :</strong></li>
-                                    <p>-</p>
+                                    @foreach ($items->detail_pemain as $item)
+                                    <p>-{{ $item->rekan_berlatih }}</p>
+                                    @endforeach
                                 </ul>
 
                             <!-- Profil Pemain -->

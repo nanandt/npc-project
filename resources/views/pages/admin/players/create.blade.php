@@ -72,7 +72,6 @@
                     </div>
                     @enderror
                 </div>
-
                 <div class="prestasi"></div>
 
                 <div class="form-group">
@@ -85,8 +84,43 @@
                     </div>
                     @enderror
                 </div>
-
                 <div class="mengesankan"></div>
+
+                <div class="form-group">
+                    <label for="pertandingan_mengecewakan">Pertandingan Mengecewakan</label>
+                    <i class="addPmengecewakan fas fa-plus fa-sm" style="float: right"></i>
+                    <input type="text" class="form-control @error('pertandingan_mengecewakan') is-invalid @enderror" name="pertandingan_mengecewakan[]" placeholder="Pertandingan Mengecewakan" value="{{ old('pertandingan_mengecewakan') }}">
+                    @error('pertandingan_mengecewakan')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+                <div class="mengecewakan"></div>
+
+                <div class="form-group">
+                    <label for="lawan_tangguh">Lawan Tangguh</label>
+                    <i class="addLawanTangguh fas fa-plus fa-sm" style="float: right"></i>
+                    <input type="text" class="form-control @error('lawan_tangguh') is-invalid @enderror" name="lawan_tangguh[]" placeholder="Lawan Tangguh" value="{{ old('lawan_tangguh') }}">
+                    @error('lawan_tangguh')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+                <div class="lawanTangguh"></div> --}}
+
+                <div class="form-group">
+                    <label for="rekan_berlatih">Rekan Berlatih</label>
+                    <i class="addRekanBerlatih fas fa-plus fa-sm" style="float: right"></i>
+                    <input type="text" class="form-control @error('rekan_berlatih') is-invalid @enderror" name="rekan_berlatih[]" placeholder="Rekan Berlatih" value="{{ old('rekan_berlatih') }}">
+                    @error('rekan_berlatih')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+                <div class="rekanBerlatih"></div>
 
                 <button type="submit" class="btn btn-primary btn-block">
                     Simpan
@@ -107,7 +141,6 @@
     });
     function addPrestasi(){
         var prestasi = `<div><div class="form-group">
-                    <label for="prestasi">Prestasi</label>
                     <i class="remove fas fa-minus fa-sm" style="float: right"></i>
                     <input type="text" class="form-control @error('prestasi') is-invalid @enderror" name="prestasi[]" placeholder="Prestasi">
                     @error('prestasi')
@@ -118,12 +151,12 @@
                 </div></div>`;
         $('.prestasi').append(prestasi);
     };
+
     $('.addPmengesankan').on('click', function(){
         addPmengesankan();
     });
     function addPmengesankan(){
         var mengesankan = `<div><div class="form-group">
-                    <label for="pertandingan_mengesankan">Pertandingan Mengesankan</label>
                     <i class="remove fas fa-minus fa-sm" style="float: right"></i>
                     <input type="text" class="form-control @error('pertandingan_mengesankan') is-invalid @enderror" name="pertandingan_mengesankan[]" placeholder="Pertandigan Mengesankan">
                     @error('pertandingan_mengesankan')
@@ -133,6 +166,54 @@
                     @enderror
                 </div></div>`;
         $('.mengesankan').append(mengesankan);
+    };
+
+    $('.addPmengecewakan').on('click', function(){
+        addPmengecewakan();
+    });
+    function addPmengecewakan(){
+        var mengecewakan = `<div><div class="form-group">
+                    <i class="remove fas fa-minus fa-sm" style="float: right"></i>
+                    <input type="text" class="form-control @error('pertandingan_mengecewakan') is-invalid @enderror" name="pertandingan_mengecewakan[]" placeholder="Pertandigan Mengecewakan">
+                    @error('pertandingan_mengecewakan')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div></div>`;
+        $('.mengecewakan').append(mengecewakan);
+    };
+
+    $('.addLawanTangguh').on('click', function(){
+        addLawanTangguh();
+    });
+    function addLawanTangguh(){
+        var lawanTangguh = `<div><div class="form-group">
+                    <i class="remove fas fa-minus fa-sm" style="float: right"></i>
+                    <input type="text" class="form-control @error('lawan_tangguh') is-invalid @enderror" name="lawan_tangguh[]" placeholder="Lawan Tangguh">
+                    @error('lawan_tangguh')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div></div>`;
+        $('.lawanTangguh').append(lawanTangguh);
+    };
+
+    $('.addRekanBerlatih').on('click', function(){
+        addRekanBerlatih();
+    });
+    function addRekanBerlatih(){
+        var rekanBerlatih = `<div><div class="form-group">
+                    <i class="remove fas fa-minus fa-sm" style="float: right"></i>
+                    <input type="text" class="form-control @error('rekan_berlatih') is-invalid @enderror" name="rekan_berlatih[]" placeholder="Rekan Berlatih">
+                    @error('rekan_berlatih')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div></div>`;
+        $('.rekanBerlatih').append(rekanBerlatih);
     };
     $('.remove').live('click', function(){
         $(this).parent().parent().remove();
