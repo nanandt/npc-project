@@ -108,7 +108,7 @@
                     </div>
                     @enderror
                 </div>
-                <div class="lawanTangguh"></div> --}}
+                <div class="lawanTangguh"></div>
 
                 <div class="form-group">
                     <label for="rekan_berlatih">Rekan Berlatih</label>
@@ -121,6 +121,54 @@
                     @enderror
                 </div>
                 <div class="rekanBerlatih"></div>
+
+                <div class="form-group">
+                    <label for="hobi">Hobi</label>
+                    <i class="addHobi fas fa-plus fa-sm" style="float: right"></i>
+                    <input type="text" class="form-control @error('hobi') is-invalid @enderror" name="hobi[]" placeholder="Hobi" value="{{ old('hobi') }}">
+                    @error('hobi')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+                <div class="hobi"></div>
+
+                <div class="form-group">
+                    <label for="makanan_favorit">Makanan Favorit</label>
+                    <i class="addMakananFavorit fas fa-plus fa-sm" style="float: right"></i>
+                    <input type="text" class="form-control @error('makanan_favorit') is-invalid @enderror" name="makanan_favorit[]" placeholder="Makanan Favorit" value="{{ old('makanan_favorit') }}">
+                    @error('makanan_favorit')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+                <div class="makananFavorit"></div>
+
+                <div class="form-group">
+                    <label for="atlit_favorit">Atlit Favorit</label>
+                    <i class="addAtlitFavorit fas fa-plus fa-sm" style="float: right"></i>
+                    <input type="text" class="form-control @error('atlit_favorit') is-invalid @enderror" name="atlit_favorit[]" placeholder="Atlit Favorit" value="{{ old('atlit_favorit') }}">
+                    @error('atlit_favorit')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+                <div class="atlitFavorit"></div>
+
+                <div class="form-group">
+                    <label for="cita_cita">Cita-cita</label>
+                    <i class="addCita fas fa-plus fa-sm" style="float: right"></i>
+                    <input type="text" class="form-control @error('cita_cita') is-invalid @enderror" name="cita_cita[]" placeholder="Cita Cita" value="{{ old('cita_cita') }}">
+                    @error('cita_cita')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+                <div class="cita"></div>
 
                 <button type="submit" class="btn btn-primary btn-block">
                     Simpan
@@ -214,6 +262,70 @@
                     @enderror
                 </div></div>`;
         $('.rekanBerlatih').append(rekanBerlatih);
+    };
+
+    $('.addHobi').on('click', function(){
+        addHobi();
+    });
+    function addHobi(){
+        var hobi = `<div><div class="form-group">
+                    <i class="remove fas fa-minus fa-sm" style="float: right"></i>
+                    <input type="text" class="form-control @error('hobi') is-invalid @enderror" name="hobi[]" placeholder="Hobi">
+                    @error('rekan_berlatih')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div></div>`;
+        $('.hobi').append(hobi);
+    };
+
+    $('.addMakananFavorit').on('click', function(){
+        addMakananFavorit();
+    });
+    function addMakananFavorit(){
+        var makananFavorit = `<div><div class="form-group">
+                    <i class="remove fas fa-minus fa-sm" style="float: right"></i>
+                    <input type="text" class="form-control @error('makanan_favorit') is-invalid @enderror" name="makanan_favorit[]" placeholder="Makanan Favorit">
+                    @error('rekan_berlatih')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div></div>`;
+        $('.makananFavorit').append(makananFavorit);
+    };
+
+    $('.addAtlitFavorit').on('click', function(){
+        addAtlitFavorit();
+    });
+    function addAtlitFavorit(){
+        var atlitFavorit = `<div><div class="form-group">
+                    <i class="remove fas fa-minus fa-sm" style="float: right"></i>
+                    <input type="text" class="form-control @error('atlit_favorit') is-invalid @enderror" name="atlit_favorit[]" placeholder="Atlit Favorit">
+                    @error('atlit_favorit')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div></div>`;
+        $('.atlitFavorit').append(atlitFavorit);
+    };
+
+    $('.addCita').on('click', function(){
+        addCita();
+    });
+    function addCita(){
+        var cita = `<div><div class="form-group">
+                    <i class="remove fas fa-minus fa-sm" style="float: right"></i>
+                    <input type="text" class="form-control @error('cita_cita') is-invalid @enderror" name="cita_cita[]" placeholder="Cita-cita">
+                    @error('cita_cita')
+                    <div class="invalid-feedback">
+                    {{ $message }}
+                    </div>
+                    @enderror
+                </div></div>`;
+        $('.cita').append(cita);
     };
     $('.remove').live('click', function(){
         $(this).parent().parent().remove();

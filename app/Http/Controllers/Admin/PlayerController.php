@@ -71,7 +71,11 @@ class PlayerController extends Controller
                     'pertandingan_mengesankan' => $request['pertandingan_mengesankan'][$item],
                     'pertandingan_mengecewakan' => $request['pertandingan_mengecewakan'][$item],
                     'lawan_tangguh' => $request['lawan_tangguh'][$item],
-                    'rekan_berlatih' => $request['rekan_berlatih'][$item]
+                    'rekan_berlatih' => $request['rekan_berlatih'][$item],
+                    'hobi' => $request['hobi'][$item],
+                    'makanan_favorit' => $request['makanan_favorit'][$item],
+                    'atlit_favorit' => $request['atlit_favorit'][$item],
+                    'cita_cita' => $request['cita_cita'][$item]
                 );
                 DetailPemain::create($data2);
             }

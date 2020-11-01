@@ -80,13 +80,24 @@
                         </div>
                                 <ul>
                                     <li><strong>Hobi :</strong></li>
-                                    <p>-</p>
+                                    @foreach ($items->detail_pemain as $item)
+                                    <p>-{{ $item->hobi }}</p>
+                                    @endforeach
+
                                     <li><strong>Makanan Favorit :</strong></li>
-                                    <p>-</p>
+                                    @foreach ($items->detail_pemain as $item)
+                                    <p>-{{ $item->makanan_favorit }}</p>
+                                    @endforeach
+
                                     <li><strong>Atlit Favorit :</strong></li>
-                                    <p>-</p>
+                                    @foreach ($items->detail_pemain as $item)
+                                    <p>-{{ $item->atlit_favorit }}</p>
+                                    @endforeach
+
                                     <li><strong>Cita-cita :</strong></li>
-                                    <p>-</p>
+                                    @foreach ($items->detail_pemain as $item)
+                                    <p>-{{ $item->cita_cita }}</p>
+                                    @endforeach
                                     <li><strong>Tentang Saya :</strong></li>
                                     <p>-</p>
                                 </ul>
