@@ -10,27 +10,26 @@
 
   <div class="card shadow">
     <div class="card-body">
-      <form action="{{ route('posts.update', $item->post_id) }}" method="POST">
+      <form action="{{ route('gallery.update', $item->id) }}" method="POST" enctype="multipart/form-data">
         @method('PUT')
         @csrf
         <div class="form-group">
-          <label for="title">Title</label>
-          <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ $item->title }}">
-          @error('title')
-          <div class="invalid-feedback">
-            {{ $message }}
-            </div>
-          @enderror
+          <label for="cabang_olahraga_id">Cabang Olahraga</label>
+          <select name="cabang_olahraga_id" required class="form-control">
+            <option value="{{ $item->cabang_olahraga_id }}">Pilih Cabang Olahraga</option>
+            @foreach ($cabors as $cabor)
+              <option value="{{ $cabor->cabang_olahraga_id}} ">
+                {{ $cabor->nama_cabor }}
+              </option>
+            @endforeach
+          </select>
         </div>
+
         <div class="form-group">
-          <label for="body">Body</label>
-          <textarea type="text" id="konten" rows="10" cols="50" class="form-control @error('body') is-invalid @enderror" name="body">{{ $item->body }}</textarea>
-          @error('body')
-          <div class="invalid-feedback">
-            {!! $message !!}
-            </div>
-          @enderror
+          <label for="foto">Foto</label>
+          <input type="file" class="form-control" name="foto" placeholder="Foto">
         </div>
+
         <button type="submit" class="btn btn-primary btn-block">
           Simpan
         </button>

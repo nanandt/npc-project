@@ -58,6 +58,23 @@ class GalleryController extends Controller
     }
 
     /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $item = Gallery::findOrFail($id);
+        $cabors = CabangOlahraga::all();
+
+        return view('pages.admin.gallery.edit',[
+            'item' => $item,
+            'cabors' => $cabors
+        ]);
+    }
+
+    /**
      * Display the specified resource.
      *
      * @param  int  $id
@@ -75,9 +92,20 @@ class GalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(GalleryRequest $request, $id)
     {
-        //
+        $data = $request->all();
+        $data['foto'] = $request->file('foto')->store(
+            'assets/gallery', 'public'
+        );
+
+        $item = Gallery::findOrFail($id);
+
+        $item->update($data);
+
+        Alert::info('Selamat', 'Data Berhasil Diedit');
+
+        return redirect()->route('gallery.index');
     }
 
     /**
@@ -88,6 +116,12 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Gallery::findOrFail($id);
+
+        $item->delete();
+
+        Alert::success('Selamat', 'Data Berhasil Dihapus');
+
+        return redirect()->route('gallery.index');
     }
 }
