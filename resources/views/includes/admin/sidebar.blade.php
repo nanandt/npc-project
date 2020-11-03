@@ -44,6 +44,11 @@
       <i class="fas fa-fw fa-user"></i>
       <span>Pelatih</span></a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{ route('gallery.index') }}">
+      <i class="fas fa-fw fa-user"></i>
+      <span>Gallery</span></a>
+  </li>
 
   <!-- Nav Item - Tables -->
   <li class="nav-item">

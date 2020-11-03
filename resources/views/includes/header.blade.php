@@ -46,7 +46,7 @@
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="#">Galeri</a>
                                         <ul class="dropdown">
-                                            <li><a href="foto.html">FOTO</a></li>
+                                            <li><a href="{{ route('foto') }}">FOTO</a></li>
                                             <li><a href="video.html">VIDEO</a></li>
                                         </ul>
                                     </li>

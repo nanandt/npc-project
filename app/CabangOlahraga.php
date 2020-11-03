@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\{Pemain, Pelatih, Gallery};
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -23,5 +24,9 @@ class CabangOlahraga extends Model
     public function pelatihs()
     {
         return $this->hasMany(Pelatih::class, 'cabang_olahraga_id', 'cabang_olahraga_id');
+    }
+    public function galleries()
+    {
+        return $this->hasMany(Gallery::class, 'cabang_olahraga_id', 'cabang_olahraga_id');
     }
 }

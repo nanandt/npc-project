@@ -26,6 +26,9 @@ Route::get('/cabang-olahraga/profile-pemain/{pemain_id}', 'ProfilPemainControlle
 Route::get('/cabang-olahraga/{cabang_olahraga_id}/pelatih', 'PelatihController@index')
                 ->name('cabor-pelatih');
 
+Route::get('/foto', 'FotoController@index')
+                ->name('foto');
+
 Route::get('/jadwal-latihan', 'JadwalController@index')
     ->name('jadwal-latihan');
 
@@ -52,6 +55,7 @@ Route::prefix('admin')
           Route::resource('cabang-olahraga', CabangOlahragaController::class);
           Route::resource('players', PlayerController::class);
           Route::resource('coachs', CoachController::class);
+          Route::resource('gallery', GalleryController::class);
 });
 
 Auth::routes();
