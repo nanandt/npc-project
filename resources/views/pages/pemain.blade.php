@@ -55,7 +55,7 @@
                                     <div class="container-overlay">
                                         <a href="{{ route('profile-pemain', $item->pemain_id) }}">
                                         <img src="{{ Storage::url($item->thumbnail) }}" width="215">
-                                        <div class="overlay">{{ $item->nama_pemain }}</div><a/>
+                                        <div class="overlay">{{ $item->nama_pemain }}</div></a>
                                     </div>
                                 </td>
                                 <td>&nbsp;</td>
@@ -67,23 +67,84 @@
 
                         <table style="cursor: pointer;">
                             <tr>
+                                @foreach ($items1 as $pemain)
                                 <td>
                                     <div class="container-overlay">
-                                        <a href="#">
-                                        <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
-                                        <div class="overlay">NURHAYATI</div></a>
+                                        <a href="{{ route('profile-pemain', $pemain->pemain_id) }}">
+                                        <img src="{{ Storage::url($pemain->thumbnail) }}" width="215">
+                                        <div class="overlay">{{ $pemain->nama_pemain }}</div></a>
                                     </div>
                                 </td>
-
                                 <td>&nbsp;</td>
+                                @endforeach
+                            </tr>
+                        </table>
 
+                        <br>
+
+                        <table style="cursor: pointer;">
+                            <tr>
+                                @foreach ($items2 as $pemain)
                                 <td>
                                     <div class="container-overlay">
-                                        <a href="#">
-                                        <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
-                                        <div class="overlay">ASRI ANANDA PUTRI</div></a>
+                                        <a href="{{ route('profile-pemain', $pemain->pemain_id) }}">
+                                        <img src="{{ Storage::url($pemain->thumbnail) }}" width="215">
+                                        <div class="overlay">{{ $pemain->nama_pemain }}</div></a>
                                     </div>
                                 </td>
+                                <td>&nbsp;</td>
+                                @endforeach
+                            </tr>
+                        </table>
+
+                        <br>
+
+                        <table style="cursor: pointer;">
+                            <tr>
+                                @foreach ($items3 as $pemain)
+                                <td>
+                                    <div class="container-overlay">
+                                        <a href="{{ route('profile-pemain', $pemain->pemain_id) }}">
+                                        <img src="{{ Storage::url($pemain->thumbnail) }}" width="215">
+                                        <div class="overlay">{{ $pemain->nama_pemain }}</div></a>
+                                    </div>
+                                </td>
+                                <td>&nbsp;</td>
+                                @endforeach
+                            </tr>
+                        </table>
+
+                        <br>
+
+                        <table style="cursor: pointer;">
+                            <tr>
+                                @foreach ($items4 as $pemain)
+                                <td>
+                                    <div class="container-overlay">
+                                        <a href="{{ route('profile-pemain', $pemain->pemain_id) }}">
+                                        <img src="{{ Storage::url($pemain->thumbnail) }}" width="215">
+                                        <div class="overlay">{{ $pemain->nama_pemain }}</div></a>
+                                    </div>
+                                </td>
+                                <td>&nbsp;</td>
+                                @endforeach
+                            </tr>
+                        </table>
+
+                        <br>
+
+                        <table style="cursor: pointer;">
+                            <tr>
+                                @foreach ($items5 as $pemain)
+                                <td>
+                                    <div class="container-overlay">
+                                        <a href="{{ route('profile-pemain', $pemain->pemain_id) }}">
+                                        <img src="{{ Storage::url($pemain->thumbnail) }}" width="215">
+                                        <div class="overlay">{{ $pemain->nama_pemain }}</div></a>
+                                    </div>
+                                </td>
+                                <td>&nbsp;</td>
+                                @endforeach
                             </tr>
                         </table>
                 </div>
