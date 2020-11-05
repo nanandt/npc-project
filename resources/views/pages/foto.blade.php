@@ -50,61 +50,49 @@
                                 <td>
                                     <div class="container-overlay">
                                         <a href="foto_atletik.html">
-                                        <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
+                                        <img src="{{ $cabor->galleries->count() ? Storage::url($cabor->galleries->first()->foto) : '' }}" alt="" width="215">
                                         <div class="overlay">{{ $cabor->nama_cabor }}</div></a>
                                     </div>
                                 </td>
                                 <td>&nbsp;</td>
                                 @endforeach
-                                <td>
+
+                                {{-- @foreach ($items as $item)
+                                  <td>
                                     <div class="container-overlay">
                                         <a href="#">
-                                        <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
-                                        <div class="overlay">Catur</div></a>
+                                        <img src="{{ $item->galleries->count() ? Storage::url($item->galleries->first()->foto) : '' }}" alt="" width="215">
+                                        <div class="overlay">{{ $item->nama_cabor }}</div></a>
                                     </div>
                                 </td>
 
                                 <td>&nbsp;</td>
+                                @endforeach --}}
 
-                                <td>
+
+                                {{-- <td>
                                     <div class="container-overlay">
                                         <a href="#">
                                         <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
                                         <div class="overlay">Bulu Tangkis</div></a>
                                     </div>
-                                </td>
+                                </td> --}}
                             </tr>
                         </table>
 
                         <table style="cursor: pointer;">
                             <tr>
-                                <td>
+                                @foreach ($items as $item)
+                                  <td>
                                     <div class="container-overlay">
                                         <a href="#">
-                                        <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
-                                        <div class="overlay">Tenis Meja</div></a>
+                                        <img src="{{ $item->galleries->count() ? Storage::url($item->galleries->first()->foto) : '' }}" alt="" width="215">
+                                        <div class="overlay">{{ $item->nama_cabor }}</div></a>
                                     </div>
                                 </td>
 
                                 <td>&nbsp;</td>
-
-                                <td>
-                                    <div class="container-overlay">
-                                        <a href="#">
-                                        <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
-                                        <div class="overlay">Renang</div></a>
-                                    </div>
-                                </td>
-
-                                <td>&nbsp;</td>
-
-                                <td>
-                                    <div class="container-overlay">
-                                        <a href="#">
-                                        <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
-                                        <div class="overlay">Panahan</div></a>
-                                    </div>
-                                </td>
+                                @endforeach
                             </tr>
                         </table>
 
