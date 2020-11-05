@@ -15,6 +15,6 @@ class PemainController extends Controller
         return view('pages.pemain', [
         'items' => $items,
         'cabors' => $cabors
-            ]);
+        ]);
     }
 }

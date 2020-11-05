@@ -28,6 +28,8 @@ Route::get('/cabang-olahraga/{cabang_olahraga_id}/pelatih', 'PelatihController@i
 
 Route::get('/foto', 'FotoController@index')
                 ->name('foto');
+Route::get('/foto/{nama_cabor}', 'DetailFotoController@index')
+                ->name('detail-foto');
 
 Route::get('/jadwal-latihan', 'JadwalController@index')
     ->name('jadwal-latihan');

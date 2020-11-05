@@ -49,7 +49,7 @@
                                 @foreach ($cabors as $cabor)
                                 <td>
                                     <div class="container-overlay">
-                                        <a href="foto_atletik.html">
+                                        <a href="{{ route('detail-foto', $cabor->nama_cabor) }}">
                                         <img src="{{ $cabor->galleries->count() ? Storage::url($cabor->galleries->first()->foto) : '' }}" alt="" width="215">
                                         <div class="overlay">{{ $cabor->nama_cabor }}</div></a>
                                     </div>
@@ -85,7 +85,7 @@
                                 @foreach ($items as $item)
                                   <td>
                                     <div class="container-overlay">
-                                        <a href="#">
+                                        <a href="{{ route('detail-foto', $item->nama_cabor) }}">
                                         <img src="{{ $item->galleries->count() ? Storage::url($item->galleries->first()->foto) : '' }}" alt="" width="215">
                                         <div class="overlay">{{ $item->nama_cabor }}</div></a>
                                     </div>
