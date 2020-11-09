@@ -58,6 +58,7 @@ Route::prefix('admin')
           Route::resource('players', PlayerController::class);
           Route::resource('coachs', CoachController::class);
           Route::resource('gallery', GalleryController::class);
+          Route::resource('videos', VideoController::class);
 });
 
 Auth::routes();

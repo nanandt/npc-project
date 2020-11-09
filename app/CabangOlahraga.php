@@ -2,7 +2,7 @@
 
 namespace App;
 
-use App\{Pemain, Pelatih, Gallery};
+use App\{Pemain, Pelatih, Gallery, Video};
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -28,5 +28,9 @@ class CabangOlahraga extends Model
     public function galleries()
     {
         return $this->hasMany(Gallery::class, 'cabang_olahraga_id', 'cabang_olahraga_id');
+    }
+    public function videos()
+    {
+        return $this->hasMany(Video::class, 'cabang_olahraga_id', 'cabang_olahraga_id');
     }
 }
