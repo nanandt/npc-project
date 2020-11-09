@@ -26,8 +26,18 @@
 
         <div class="form-group">
           <label for="foto" class="form-control-label">Foto</label>
-          <input type="file" name="foto" value="{{ old('foto') }}" accept="image/*" class="form-control @error('foto') is-invalid @enderror">
+          <input type="file" name="foto" value="{{ $item->foto }}" accept="image/*" class="form-control @error('foto') is-invalid @enderror">
           @error('foto')
+          <div class="invalid-feedback">
+            {{ $message }}
+            </div>
+          @enderror
+        </div>
+
+        <div class="form-group">
+          <label for="video" class="form-control-label">Video</label>
+          <input type="file" name="video" value="{{ old('video') }}" class="form-control @error('video') is-invalid @enderror">
+          @error('video')
           <div class="invalid-feedback">
             {{ $message }}
             </div>

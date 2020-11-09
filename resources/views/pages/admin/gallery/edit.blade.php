@@ -5,7 +5,7 @@
 
   <!-- Page Heading -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Edit Artikel</h1>
+    <h1 class="h3 mb-0 text-gray-800">Edit Gallery {{ $item->cabor->nama_cabor }}</h1>
   </div>
 
   <div class="card shadow">
@@ -27,7 +27,22 @@
 
         <div class="form-group">
           <label for="foto">Foto</label>
-          <input type="file" class="form-control" name="foto" placeholder="Foto">
+          <input type="file" value="{{ $item->foto }}" class="form-control @error('foto') is-invalid @enderror" name="foto" placeholder="Foto">
+          @error('foto')
+          <div class="invalid-feedback">
+            {{ $message }}
+          </div>
+          @enderror
+        </div>
+
+        <div class="form-group">
+          <label for="video">Video</label>
+          <input type="file" value="{{ $item->video }}" class="form-control @error('video') is-invalid @enderror" name="video" placeholder="Video">
+          @error('video')
+          <div class="invalid-feedback">
+            {{ $message }}
+          </div>
+          @enderror
         </div>
 
         <button type="submit" class="btn btn-primary btn-block">

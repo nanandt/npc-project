@@ -49,11 +49,11 @@
       <i class="fas fa-fw fa-user"></i>
       <span>Gallery</span></a>
   </li>
-  <li class="nav-item">
+  {{-- <li class="nav-item">
     <a class="nav-link" href="{{ route('videos.index') }}">
       <i class="fas fa-fw fa-video"></i>
       <span>Video</span></a>
-  </li>
+  </li> --}}
 
   <!-- Nav Item - Tables -->
   <li class="nav-item">

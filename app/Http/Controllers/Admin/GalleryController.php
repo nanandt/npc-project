@@ -49,6 +49,9 @@ class GalleryController extends Controller
         $data['foto'] = $request->file('foto')->store(
             'assets/gallery', 'public'
         );
+        $data['video'] = $request->file('video')->store(
+            'assets/videos', 'public'
+        );
 
         Gallery::create($data);
 
@@ -95,11 +98,17 @@ class GalleryController extends Controller
     public function update(GalleryRequest $request, $id)
     {
         $data = $request->all();
+        // dd($data);
+
         $data['foto'] = $request->file('foto')->store(
             'assets/gallery', 'public'
         );
+        $data['video'] = $request->file('video')->store(
+            'assets/videos', 'public'
+        );
 
         $item = Gallery::findOrFail($id);
+
 
         $item->update($data);
 

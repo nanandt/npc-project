@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Gallery extends Model
 {
-    protected $fillable = ['cabang_olahraga_id', 'foto'];
+    protected $fillable = ['cabang_olahraga_id', 'foto', 'video'];
 
 
     public function cabor()

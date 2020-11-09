@@ -9,7 +9,7 @@
       <h1 class="h3 mb-0 text-gray-800">Data Gallery</h1>
       <a href="{{ route('gallery.create') }}" class="btn btn-sm btn-primary shadow-sm">
         <i class="fas fa-plus fa-sm text-white-50"></i>
-        Tambah Foto
+        Tambah Gallery
       </a>
     </div>
 
@@ -23,6 +23,7 @@
                 <th>ID</th>
                 <th>Nama Cabor</th>
                 <th>Foto</th>
+                <th>Video</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -34,6 +35,11 @@
                 <td>
                   <img src="{{ Storage::url($item->foto) }}" style="width:150px"
                     class="img-thumbnail">
+                </td>
+                <td>
+                    <video width="215" controls>
+                        <source src="{{ Storage::url($item->video) }}" type="video/mp4">
+                    </video>
                 </td>
                 <td>
                   <a href="{{ route('gallery.edit', $item->id) }}" class="btn btn-info">
