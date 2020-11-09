@@ -31,6 +31,9 @@ Route::get('/foto', 'FotoController@index')
 Route::get('/foto/{nama_cabor}', 'DetailFotoController@index')
                 ->name('detail-foto');
 
+Route::get('/video', 'VidioController@index')
+                ->name('video');
+
 Route::get('/jadwal-latihan', 'JadwalController@index')
     ->name('jadwal-latihan');
 
