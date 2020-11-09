@@ -9,11 +9,13 @@ class FotoController extends Controller
 {
     public function index()
     {
-        $cabors = CabangOlahraga::with(['pemains', 'pelatihs', 'galleries'])->take(3)->get();
+        $cabors = CabangOlahraga::with(['pemains', 'pelatihs', 'galleries'])->get();
+        $cabors1 = CabangOlahraga::with(['pemains', 'pelatihs'])->take(3)->get();
         $items = CabangOlahraga::with(['pemains', 'pelatihs', 'galleries'])->skip(3)->take(3)->get();
         return view('pages.foto', [
-            'cabors' => $cabors,
-            'items' => $items
+            'cabors1' => $cabors1,
+            'items' => $items,
+            'cabors' => $cabors
         ]);
     }
 }
