@@ -63,6 +63,21 @@ class PlayerController extends Controller
         // $detailpemain->pemain_id = $data->pemain_id;
         // $detailpemain->prestasi = $request['prestasi'];
         // $detailpemain->save();
+        $validator = \Validator::make($request->all(), [
+            'prestasi.*' => 'required',
+            'pertandingan_mengesankan.*' => 'required',
+            'pertandingan_mengecewakan.*' => 'required',
+            'lawan_tangguh.*' => 'required',
+            'rekan_berlatih.*' => 'required',
+            'hobi.*' => 'required',
+            'makanan_favorit.*' => 'required',
+            'atlit_favorit.*' => 'required',
+            'cita_cita.*' => 'required',
+        ]);
+
+            if($validator->fails()) {
+            return back()->withInput()->withErrors($validator->errors());
+  }
         if(count($request['prestasi'] > 0)){
             foreach($request['prestasi'] as $item => $v){
                 $data2 = array(
