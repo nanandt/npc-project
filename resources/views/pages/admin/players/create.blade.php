@@ -65,10 +65,10 @@
                 <div class="form-group">
                     <label for="prestasi">Prestasi</label>
                     <i class="addPrestasi fas fa-plus fa-sm" style="float: right"></i>
-                    <input type="text" value="{{ old('prestasi') }}" class="form-control @error('prestasi') is-invalid @enderror" name="prestasi[]" placeholder="Prestasi">
+                    <input type="text" value="{{ old('prestasi[]') }}" class="form-control @error('prestasi') is-invalid @enderror" name="prestasi[]" placeholder="Prestasi">
                     @error('prestasi')
                     <div class="invalid-feedback">
-                    {{ $message }}
+                    {{ $errors }}
                     </div>
                     @enderror
                 </div>
@@ -164,7 +164,7 @@
                     <input type="text" value="{{ old('cita_cita') }}" class="form-control @error('cita_cita') is-invalid @enderror" name="cita_cita[]" placeholder="Cita Cita">
                     @error('cita_cita')
                     <div class="invalid-feedback">
-                    {{ $validator->errors() }}
+                    {{ $errors }}
                     </div>
                     @enderror
                 </div>

@@ -17,4 +17,9 @@ class Pelatih extends Model
     {
         return $this->belongsTo(CabangOlahraga::class, 'cabang_olahraga_id');
     }
+
+    public function detail_pelatih()
+    {
+        return $this->hasMany(DetailPelatih::class, 'pelatih_id');
+    }
 }

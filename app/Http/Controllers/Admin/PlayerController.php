@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\PlayerRequest;
 use App\Pemain;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class PlayerController extends Controller
@@ -63,7 +64,7 @@ class PlayerController extends Controller
         // $detailpemain->pemain_id = $data->pemain_id;
         // $detailpemain->prestasi = $request['prestasi'];
         // $detailpemain->save();
-        $validator = \Validator::make($request->all(), [
+        $validator = Validator::make($request->all(), [
             'prestasi.*' => 'required',
             'pertandingan_mengesankan.*' => 'required',
             'pertandingan_mengecewakan.*' => 'required',
