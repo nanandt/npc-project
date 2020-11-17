@@ -22,4 +22,15 @@ class PelatihController extends Controller
             'items3' => $items3
         ]);
     }
+
+    public function detail(Request $request, $pelatih_id)
+    {
+      $cabors = CabangOlahraga::with('pelatihs')->get();
+        $items = Pelatih::with('detail_pelatih','cabang_olahraga')->where('pelatih_id', $pelatih_id)->first();
+
+        return view('pages.profile-pelatih', [
+            'cabors' => $cabors,
+            'items' => $items
+        ]);
+    }
 }
