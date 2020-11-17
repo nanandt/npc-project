@@ -67,23 +67,50 @@
 
                         <table style="cursor: pointer;">
                             <tr>
+                                @foreach ($items1 as $pelatih)
                                 <td>
                                     <div class="container-overlay">
                                         <a href="#">
-                                        <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
-                                        <div class="overlay">NURHAYATI</div></a>
+                                        <img src="{{ Storage::url($pelatih->thumbnail) }}" width="215">
+                                        <div class="overlay">{{ $pelatih->nama_pelatih }}</div></a>
                                     </div>
                                 </td>
-
                                 <td>&nbsp;</td>
+                                @endforeach
+                            </tr>
+                        </table>
+                        
+                        <br>
 
+                        <table style="cursor: pointer;">
+                            <tr>
+                                @foreach ($items2 as $pelatih)
                                 <td>
                                     <div class="container-overlay">
                                         <a href="#">
-                                        <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
-                                        <div class="overlay">ASRI ANANDA PUTRI</div></a>
+                                        <img src="{{ Storage::url($pelatih->thumbnail) }}" width="215">
+                                        <div class="overlay">{{ $pelatih->nama_pelatih }}</div></a>
                                     </div>
                                 </td>
+                                <td>&nbsp;</td>
+                                @endforeach
+                            </tr>
+                        </table>
+
+                        <br>
+
+                        <table style="cursor: pointer;">
+                            <tr>
+                                @foreach ($items3 as $pelatih)
+                                <td>
+                                    <div class="container-overlay">
+                                        <a href="#">
+                                        <img src="{{ Storage::url($pelatih->thumbnail) }}" width="215">
+                                        <div class="overlay">{{ $pelatih->nama_pelatih }}</div></a>
+                                    </div>
+                                </td>
+                                <td>&nbsp;</td>
+                                @endforeach
                             </tr>
                         </table>
                 </div>

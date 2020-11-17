@@ -16,6 +16,7 @@ class PemainController extends Controller
         $items3 = Pemain::with('cabang_olahraga')->where('cabang_olahraga_id', $request->cabang_olahraga_id)->skip(9)->take(3)->get();
         $items4 = Pemain::with('cabang_olahraga')->where('cabang_olahraga_id', $request->cabang_olahraga_id)->skip(12)->take(3)->get();
         $items5 = Pemain::with('cabang_olahraga')->where('cabang_olahraga_id', $request->cabang_olahraga_id)->skip(15)->take(3)->get();
+        $items6 = Pemain::with('cabang_olahraga')->where('cabang_olahraga_id', $request->cabang_olahraga_id)->skip(18)->take(3)->get();
         // dd($items);
         return view('pages.pemain', [
         'items' => $items,
@@ -24,7 +25,8 @@ class PemainController extends Controller
         'items2' => $items2,
         'items3' => $items3,
         'items4' => $items4,
-        'items5' => $items5
+        'items5' => $items5,
+        'items6' => $items6
         ]);
     }
 }

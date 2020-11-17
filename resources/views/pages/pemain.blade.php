@@ -145,6 +145,23 @@
                                 @endforeach
                             </tr>
                         </table>
+
+                        <br>
+
+                        <table style="cursor: pointer;">
+                            <tr>
+                                @foreach ($items6 as $pemain)
+                                <td>
+                                    <div class="container-overlay">
+                                        <a href="{{ route('profile-pemain', $pemain->pemain_id) }}">
+                                        <img src="{{ Storage::url($pemain->thumbnail) }}" width="215">
+                                        <div class="overlay">{{ $pemain->nama_pemain }}</div></a>
+                                    </div>
+                                </td>
+                                <td>&nbsp;</td>
+                                @endforeach
+                            </tr>
+                        </table>
                 </div>
             </div>
 
