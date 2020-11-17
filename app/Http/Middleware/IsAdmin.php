@@ -2,10 +2,10 @@
 
 namespace App\Http\Middleware;
 
-use Auth;
 use Closure;
+use Illuminate\Support\Facades\Auth;
 
-class admin
+class IsAdmin
 {
     /**
      * Handle an incoming request.
@@ -18,7 +18,8 @@ class admin
     {
         if(Auth::check() && Auth::user()->roles == 'ADMIN'){
             return $next($request);
+        }elseif (Auth::user()->roles == 'USER') {
+            return redirect('/');
         }
-        return redirect('/');
     }
 }

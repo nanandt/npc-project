@@ -51,7 +51,7 @@ Route::get('/berita', 'BeritaController@index')
     ->name('berita');
 
 Route::prefix('admin')
-        ->middleware('auth')
+        ->middleware('auth', 'admin')
         ->namespace('Admin')
         ->group(function(){
           Route::get('/', 'DashboardController@index')

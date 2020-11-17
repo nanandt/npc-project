@@ -61,7 +61,18 @@
 
                         <div class="top-meta-data d-flex align-items-center">
                             <!-- Login -->
-                            <a href="{{ route('login') }}" class="login-btn"><i class="fa fa-user" aria-hidden="true"></i></a>
+                            @guest
+                                <a href="{{ route('login') }}" class="login-btn"><i class="fa fa-user" aria-hidden="true"></i></a>
+                            @endguest
+                            @auth
+                                <form class="form-inline d-none d-md-block" action="{{ url('logout') }}"
+                                  method="POST">
+                                  @csrf
+                                  <button class="btn login-btn" type="submit">
+                                      <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                  </button>
+                              </form>
+                            @endauth
                         </div>
                     </div>
                 </nav>
