@@ -26,8 +26,6 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Cabang Olahraga</li>
-                        <li class="breadcrumb-item active" aria-current="page">Judo</li>
-                        <li class="breadcrumb-item active" aria-current="page">Pemain</li>
                     </ol>
                 </nav>
             </div>

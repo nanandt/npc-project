@@ -34,11 +34,13 @@
 
                                         <ul class="dropdown">
                                              @foreach ($cabors as $cabor)
-                                            <li>
+                                            <li class="nav-item">
                                               <a href="#">{{ $cabor->nama_cabor }}</a>
                                               <ul class="dropdown">
-                                                <li><a href="{{ route('cabor-pemain', $cabor->cabang_olahraga_id) }}">PEMAIN</a></li>
-                                                <li><a href="{{ route('cabor-pelatih', $cabor->cabang_olahraga_id) }}">PELATIH</a></li>
+                                                <li class="nav-item">
+                                                  <a href="{{ route('cabor-pemain', $cabor->cabang_olahraga_id) }}">PEMAIN</a></li>
+                                                <li>
+                                                  <a href="{{ route('cabor-pelatih', $cabor->cabang_olahraga_id) }}">PELATIH</a></li>
                                               </ul>
                                             </li>
                                             @endforeach
