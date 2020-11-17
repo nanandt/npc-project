@@ -53,7 +53,7 @@
                                 @foreach ($items as $item)
                                 <td>
                                     <div class="container-overlay">
-                                        <a href="#">
+                                        <a href="{{ route('profile-pelatih', $item->pelatih_id) }}">
                                         <img src="{{ Storage::url($item->thumbnail) }}" width="215">
                                         <div class="overlay">{{ $item->nama_pelatih }}</div></a>
                                     </div>

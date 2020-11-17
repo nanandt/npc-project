@@ -26,6 +26,9 @@ Route::get('/cabang-olahraga/profile-pemain/{pemain_id}', 'ProfilPemainControlle
 Route::get('/cabang-olahraga/{cabang_olahraga_id}/pelatih', 'PelatihController@index')
                 ->name('cabor-pelatih');
 
+Route::get('/cabang-olahraga/profile-pelatih/{pelatih_id}', 'PelatihController@detail')
+                ->name('profile-pelatih');
+
 Route::get('/foto', 'FotoController@index')
                 ->name('foto');
 Route::get('/foto/{nama_cabor}', 'DetailFotoController@index')
