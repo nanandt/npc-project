@@ -4,7 +4,7 @@
 
 @section('content')
 <!-- ##### Breadcrumb Area Start ##### -->
-<section class="breadcrumb-area bg-img bg-overlay" style="background-image: url({{ 'frontend/img/bg-img/40.jpg' }});">
+<section class="breadcrumb-area bg-img bg-overlay" style="background-image: url({{ 'frontend/img/bg-img/logo_png.jpg' }});">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-12">
@@ -59,7 +59,7 @@
                             </div>
                             <div class="text">
                                 <p>Alamat:</p>
-                                <h6>Sekretariat: GOR Wibawa Mukti Jl. Science Boulevard, Sertajaya, Sertajaya, Kec. Cikarang Tim., Bekasi, Jawa Barat 17530</h6>
+                                <a href="https://goo.gl/maps/svY2sjV4S7wB8Q4F6" target="_blank" rel="nofollow">Sekretariat: GOR Wibawa Mukti Jl. Science Boulevard, Sertajaya, Sertajaya, Kec. Cikarang Tim., Bekasi, Jawa Barat 17530</a>
                             </div>
                         </div>
 
@@ -70,7 +70,7 @@
                             </div>
                             <div class="text">
                                 <p>Email:</p>
-                                <a href="mailto:nationalparalympic@gmail.com?" targer="_blank" rel="nofollow">nationalparalympic@gmail.com</a>
+                                <a href="mailto:#?" target="_blank" rel="nofollow">@gmail.com</a>
                             </div>
                         </div>
 
@@ -81,7 +81,7 @@
                             </div>
                             <div class="text">
                                 <p>Phone:</p>
-                                <h6>087878677472</h6>
+                                <a href="https://api.whatsapp.com/send?phone=6287878677472" target="_blank" rel="nofollow">087878677472</a>
                             </div>
                         </div>
                     </div>
@@ -126,14 +126,17 @@
                     <div class="single-sidebar-widget p-30">
                         <!-- Social Followers Info -->
                         <div class="social-followers-info">
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/npcikabupatenbekasi/" target="_blank" rel="nofollow" class="instagram-followers"><i class="fa fa-instagram"></i>Instagram</a>
                             <!-- Facebook -->
-                            <a href="#" class="facebook-fans"><i class="fa fa-facebook"></i>Facebook</a>
+                            <a href="#" target="_blank" rel="nofollow" class="facebook-fans"><i class="fa fa-facebook"></i>Facebook</a>
                             <!-- Twitter -->
-                            <a href="#" class="twitter-followers"><i class="fa fa-twitter"></i>Twitter</a>
+                            <a href="#" target="_blank" rel="nofollow" class="twitter-followers"><i class="fa fa-twitter"></i>Twitter</a>
                             <!-- YouTube -->
-                            <a href="#" class="youtube-subscribers"><i class="fa fa-youtube"></i>Youtube</a>
+                            <a href="#" target="_blank" rel="nofollow" class="youtube-subscribers"><i class="fa fa-youtube"></i>YouTube</a>
                             <!-- Google -->
-                            <a href="#" class="google-followers"><i class="fa fa-google-plus"></i>Google</a>
+                            <a href="mailto:#?" target="_blank" rel="nofollow" class="google-followers"><i class="fa fa-google"></i>Gmail</a>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                         </div>
                     </div>
                 </div>

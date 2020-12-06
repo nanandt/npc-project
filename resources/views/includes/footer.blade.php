@@ -6,8 +6,7 @@
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="footer-widget">
                     <!-- Logo -->
-                    <a href="index.html" class="foo-logo"><img src="{{ url('frontend/img/core-img/logo2.png') }}" alt=""></a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="foo-logo"><img src="{{ url('frontend/img/core-img/logo2.png') }}" alt=""></a>
                 </div>
             </div>
 
@@ -19,11 +18,11 @@
                     <h6 class="widget-title"></h6>
                     <!-- Single Blog Post -->
                     <div class="footer-social-info">
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
-                        <a href="#" class="google-plus"><i class="fa fa-google"></i></a>
+                        <a href="https://www.instagram.com/npcikabupatenbekasi/" target="_blank" rel="nofollow"><i class="fa fa-instagram"></i></a>
+                        <a href="#" target="_blank" rel="nofollow" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" target="_blank" rel="nofollow" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" target="_blank" rel="nofollow" class="youtube"><i class="fa fa-youtube"></i></a>
+                        <a href="#" target="_blank" rel="nofollow" class="google-plus"><i class="fa fa-google"></i></a>
                     </div>
                 </div>
             </div>
@@ -35,20 +34,10 @@
         <div class="container">
             <div class="row">
                 <!-- Copywrite Text -->
-                <div class="col-12 col-sm-6">
+                <div class="col-12 text-md-center text-left">
                     <p class="copywrite-text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         Copyright &copy;<script>document.write(new Date().getFullYear());</script> National Paralympic Committee of Indonesia | All rights reserved
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <nav class="footer-nav">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Privacy</a></li>
-                            <li><a href="#">Advertisement</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
-                    </nav>
                 </div>
             </div>
         </div>

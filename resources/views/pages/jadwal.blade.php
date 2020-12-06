@@ -3,7 +3,7 @@
 
 @section('content')
 <!-- ##### Breadcrumb Area Start ##### -->
-    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url({{ 'frontend/img/bg-img/40.jpg' }});">
+    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url({{ 'frontend/img/bg-img/logo_png.jpg' }});">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -23,9 +23,8 @@
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i>
-                            Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Jadwal</li>
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Jadwal Latihan</li>
                         </ol>
                     </nav>
                 </div>
@@ -138,7 +137,6 @@
                                 <li><i class="fa fa-check"></i>SABTU - 16:00 s/d 17:30 - GOR WIBAWAMUKTI</li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
 
@@ -149,16 +147,16 @@
                             <!-- Social Followers Info -->
                             <div class="social-followers-info">
                                 <!-- Instagram -->
-                                <a href="#" class="instagram-followers"><i class="fa fa-instagram"></i>Instagram</a>
-                                <!-- Facebook -->
-                                <a href="#" class="facebook-fans"><i class="fa fa-facebook"></i>Facebook</a>
-                                <!-- Twitter -->
-                                <a href="#" class="twitter-followers"><i class="fa fa-twitter"></i>Twitter</a>
-                                <!-- YouTube -->
-                                <a href="#" class="youtube-subscribers"><i class="fa fa-youtube"></i>YouTube</a>
-                                <!-- Google -->
-                                <a href="#" class="google-followers"><i class="fa fa-google-plus"></i>Google</a>
-                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                            <a href="https://www.instagram.com/npcikabupatenbekasi/" target="_blank" rel="nofollow" class="instagram-followers"><i class="fa fa-instagram"></i>Instagram</a>
+                            <!-- Facebook -->
+                            <a href="#" target="_blank" rel="nofollow" class="facebook-fans"><i class="fa fa-facebook"></i>Facebook</a>
+                            <!-- Twitter -->
+                            <a href="#" target="_blank" rel="nofollow" class="twitter-followers"><i class="fa fa-twitter"></i>Twitter</a>
+                            <!-- YouTube -->
+                            <a href="#" target="_blank" rel="nofollow" class="youtube-subscribers"><i class="fa fa-youtube"></i>YouTube</a>
+                            <!-- Google -->
+                            <a href="mailto:#?" target="_blank" rel="nofollow" class="google-followers"><i class="fa fa-google"></i>Gmail</a>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br>
                             </div>
                         </div>
                     </div>
