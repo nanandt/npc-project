@@ -223,14 +223,16 @@
                     </div>
                 </div>
 
+                @foreach ($videos as $item)
                 <!-- Single Blog Post -->
                 <div class="single-blog-post style-4">
                     <div class="post-thumbnail">
-                        <a href="foto.html"><img src="img/bg-img/29.jpg" alt=""></a>
+                        <a href="foto.html"><img src="{{ Storage::url($item->foto) }}" alt=""></a>
                     </div>
                 </div>
+                @endforeach
 
-                <!-- Single Blog Post -->
+                {{-- <!-- Single Blog Post -->
                 <div class="single-blog-post style-4">
                     <div class="post-thumbnail">
                         <a href="foto.html"><img src="img/bg-img/30.jpg" alt=""></a>
@@ -256,7 +258,7 @@
                     <div class="post-thumbnail">
                         <a href="foto.html"><img src="img/bg-img/30.jpg" alt=""></a>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
             <br><br>
@@ -276,7 +278,21 @@
             </div>
 
             <div class="sports-videos-slides owl-carousel mb-30">
+
+                @foreach ($videos as $item)
                 <!-- Single Featured Post -->
+                <div class="single-featured-post">
+                    <!-- Thumbnail -->
+                    <div class="post-thumbnail mb-50">
+                        <video width="550" controls>
+                        <source src="{{ Storage::url($item->video) }}" type="video/mp4">
+                    </video>
+                    </div>
+                </div>
+                @endforeach
+
+
+                {{-- <!-- Single Featured Post -->
                 <div class="single-featured-post">
                     <!-- Thumbnail -->
                     <div class="post-thumbnail mb-50">
@@ -292,16 +308,7 @@
                         <img src="#" alt="">
                         <a href="#" target="_blank" rel="nofollow" class="video-play"><i class="fa fa-play" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></i></a>
                     </div>
-                </div>
-
-                <!-- Single Featured Post -->
-                <div class="single-featured-post">
-                    <!-- Thumbnail -->
-                    <div class="post-thumbnail mb-50">
-                        <img src="#" alt="">
-                        <a href="#" target="_blank" rel="nofollow" class="video-play"><i class="fa fa-play" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></i></a>
-                    </div>
-                </div>
+                </div> --}}
             </div>
 
             <div class="row">
@@ -323,14 +330,14 @@
             <div class="social-followers-info">
                 <!-- Instagram -->
                 <a href="https://www.instagram.com/npcikabupatenbekasi/" target="_blank" rel="nofollow" class="instagram-followers"><i class="fa fa-instagram"></i>Instagram</a>
-                            <!-- Facebook -->
-                            <a href="#" target="_blank" rel="nofollow" class="facebook-fans"><i class="fa fa-facebook"></i>Facebook</a>
-                            <!-- Twitter -->
-                            <a href="#" target="_blank" rel="nofollow" class="twitter-followers"><i class="fa fa-twitter"></i>Twitter</a>
-                            <!-- YouTube -->
-                            <a href="#" target="_blank" rel="nofollow" class="youtube-subscribers"><i class="fa fa-youtube"></i>YouTube</a>
-                            <!-- Google -->
-                            <a href="mailto:#?" target="_blank" rel="nofollow" class="google-followers"><i class="fa fa-google"></i>Gmail</a>
+                <!-- Facebook -->
+                <a href="#" target="_blank" rel="nofollow" class="facebook-fans"><i class="fa fa-facebook"></i>Facebook</a>
+                <!-- Twitter -->
+                <a href="#" target="_blank" rel="nofollow" class="twitter-followers"><i class="fa fa-twitter"></i>Twitter</a>
+                <!-- YouTube -->
+                <a href="#" target="_blank" rel="nofollow" class="youtube-subscribers"><i class="fa fa-youtube"></i>YouTube</a>
+                <!-- Google -->
+                <a href="mailto:#?" target="_blank" rel="nofollow" class="google-followers"><i class="fa fa-google"></i>Gmail</a>
             </div>
         </div>
     </div>
