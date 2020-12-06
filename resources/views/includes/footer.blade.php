@@ -18,11 +18,11 @@
                     <h6 class="widget-title"></h6>
                     <!-- Single Blog Post -->
                     <div class="footer-social-info">
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
-                        <a href="#" class="google-plus"><i class="fa fa-google"></i></a>
+                        <a href="https://www.instagram.com/npcikabupatenbekasi/" target="_blank" rel="nofollow"><i class="fa fa-instagram"></i></a>
+                        <a href="#" target="_blank" rel="nofollow" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" target="_blank" rel="nofollow" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" target="_blank" rel="nofollow" class="youtube"><i class="fa fa-youtube"></i></a>
+                        <a href="#" target="_blank" rel="nofollow" class="google-plus"><i class="fa fa-google"></i></a>
                     </div>
                 </div>
             </div>

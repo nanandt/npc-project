@@ -25,7 +25,6 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Foto</li>
-                        <li class="breadcrumb-item active" aria-current="page">Foto Atletik</li>
                     </ol>
                 </nav>
             </div>
@@ -50,72 +49,11 @@
                             <tr>
                                 @foreach ($item->galleries as $gallery)
                                 <td>
-                                    <a href="{{ url('frontend/img/foto/menembak.jpg') }}">
+                                    <a href="{{ Storage::url($gallery->foto) }}">
                                     <img src="{{ Storage::url($gallery->foto) }}" width="215" alt=""></a>
                                 </td>
                                 <td>&nbsp;</td>
                                 @endforeach
-
-                                {{-- <td>
-                                    <a href="{{ url('frontend/img/foto/menembak.jpg') }}">
-                                    <img src="{{ url('frontend/img/foto/menembak.jpg') }}" width="215" alt=""></a>
-                                </td>
-                                <td>&nbsp;</td>
-
-                                <td>
-                                    <a href="{{ url('frontend/img/foto/menembak.jpg') }}">
-                                    <img src="{{ url('frontend/img/foto/menembak.jpg') }}" width="215" alt=""></a>
-                                </td> --}}
-                            </tr>
-                        </table>
-
-                        <br>
-
-                        <table style="cursor: pointer;">
-                            <tr>
-                                <td>
-                                    <a href="img/foto/menembak.jpg">
-                                    <img src="img/foto/menembak.jpg" width="215" alt=""></a>
-                                </td>
-
-                                <td>&nbsp;</td>
-
-                                <td>
-                                    <a href="img/foto/menembak.jpg">
-                                    <img src="img/foto/menembak.jpg" width="215" alt=""></a>
-                                </td>
-
-                                <td>&nbsp;</td>
-
-                                <td>
-                                    <a href="img/foto/menembak.jpg">
-                                    <img src="img/foto/menembak.jpg" width="215" alt=""></a>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <br>
-
-                        <table style="cursor: pointer;">
-                            <tr>
-                                <td>
-                                    <a href="img/foto/menembak.jpg">
-                                    <img src="img/foto/menembak.jpg" width="215" alt=""></a>
-                                </td>
-
-                                <td>&nbsp;</td>
-
-                                <td>
-                                    <a href="img/foto/menembak.jpg">
-                                    <img src="img/foto/menembak.jpg" width="215" alt=""></a>
-                                </td>
-
-                                <td>&nbsp;</td>
-
-                                <td>
-                                    <a href="img/foto/menembak.jpg">
-                                    <img src="img/foto/menembak.jpg" width="215" alt=""></a>
-                                </td>
                             </tr>
                         </table>
                 </div>
@@ -130,15 +68,15 @@
                         <!-- Social Followers Info -->
                         <div class="social-followers-info">
                             <!-- Instagram -->
-                            <a href="#" class="instagram-followers"><i class="fa fa-instagram"></i>Instagram</a>
+                            <a href="https://www.instagram.com/npcikabupatenbekasi/" target="_blank" rel="nofollow" class="instagram-followers"><i class="fa fa-instagram"></i>Instagram</a>
                             <!-- Facebook -->
-                            <a href="#" class="facebook-fans"><i class="fa fa-facebook"></i>Facebook</a>
+                            <a href="#" target="_blank" rel="nofollow" class="facebook-fans"><i class="fa fa-facebook"></i>Facebook</a>
                             <!-- Twitter -->
-                            <a href="#" class="twitter-followers"><i class="fa fa-twitter"></i>Twitter</a>
+                            <a href="#" target="_blank" rel="nofollow" class="twitter-followers"><i class="fa fa-twitter"></i>Twitter</a>
                             <!-- YouTube -->
-                            <a href="#" class="youtube-subscribers"><i class="fa fa-youtube"></i>YouTube</a>
+                            <a href="#" target="_blank" rel="nofollow" class="youtube-subscribers"><i class="fa fa-youtube"></i>YouTube</a>
                             <!-- Google -->
-                            <a href="#" class="google-followers"><i class="fa fa-google-plus"></i>Google</a>
+                            <a href="mailto:#?" target="_blank" rel="nofollow" class="google-followers"><i class="fa fa-google"></i>Gmail</a>
                         </div>
                     </div>
                 </div>

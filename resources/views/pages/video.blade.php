@@ -8,7 +8,7 @@
         <div class="row h-100 align-items-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h2>FOTO</h2>
+                    <h2>Video</h2>
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Foto</li>
+                        <li class="breadcrumb-item active" aria-current="page">Video</li>
                     </ol>
                 </nav>
             </div>
@@ -56,27 +56,6 @@
                             </td>
                             <td>&nbsp;</td>
                             @endforeach
-
-                            {{-- @foreach ($items as $item)
-                                <td>
-                                <div class="container-overlay">
-                                    <a href="#">
-                                    <img src="{{ $item->galleries->count() ? Storage::url($item->galleries->first()->foto) : '' }}" alt="" width="215">
-                                    <div class="overlay">{{ $item->nama_cabor }}</div></a>
-                                </div>
-                            </td>
-
-                            <td>&nbsp;</td>
-                            @endforeach --}}
-
-
-                            {{-- <td>
-                                <div class="container-overlay">
-                                    <a href="#">
-                                    <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
-                                    <div class="overlay">Bulu Tangkis</div></a>
-                                </div>
-                            </td> --}}
                         </tr>
                     </table>
 
@@ -92,84 +71,6 @@
                             </td>
                             <td>&nbsp;</td>
                             @endforeach
-                        </tr>
-                    </table>
-
-                    <table style="cursor: pointer;">
-                        <tr>
-                            <td>
-                                <div class="container-overlay">
-                                    <a href="#">
-                                    <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
-                                    <div class="overlay">Judo</div></a>
-                                </div>
-                            </td>
-
-                            <td>&nbsp;</td>
-
-                            <td>
-                                <div class="container-overlay">
-                                    <a href="#">
-                                    <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
-                                    <div class="overlay">Menembak</div></a>
-                                </div>
-                            </td>
-
-                            <td>&nbsp;</td>
-
-                            <td>
-                                <div class="container-overlay">
-                                    <a href="#">
-                                    <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
-                                    <div class="overlay">Goal Ball</div></a>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <table style="cursor: pointer;">
-                        <tr>
-                            <td>
-                                <div class="container-overlay">
-                                    <a href="#">
-                                    <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
-                                    <div class="overlay">Tenis Lapang</div></a>
-                                </div>
-                            </td>
-
-                            <td>&nbsp;</td>
-
-                            <td>
-                                <div class="container-overlay">
-                                    <a href="#">
-                                    <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
-                                    <div class="overlay">Voli Duduk</div></a>
-                                </div>
-                            </td>
-
-                            <td>&nbsp;</td>
-
-                            <td>
-                                <div class="container-overlay">
-                                    <a href="#">
-                                    <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
-                                    <div class="overlay">Balap Sepeda</div></a>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <table style="cursor: pointer;">
-                        <tr>
-                            <td>
-                                <div class="container-overlay">
-                                    <a href="#">
-                                    <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
-                                    <div class="overlay">Angkat Berat</div></a>
-                                </div>
-                            </td>
-
-                            <td>&nbsp;</td>
                         </tr>
                     </table>
                 </div>
@@ -192,7 +93,7 @@
                             <!-- YouTube -->
                             <a href="#" class="youtube-subscribers"><i class="fa fa-youtube"></i>YouTube</a>
                             <!-- Google -->
-                            <a href="#" class="google-followers"><i class="fa fa-google-plus"></i>Google</a>
+                            <a href="#" class="google-followers"><i class="fa fa-google"></i>Gmail</a>
                         </div>
                     </div>
                 </div>
