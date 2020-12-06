@@ -5,9 +5,11 @@ namespace App\Http\Controllers\Admin;
 use App\CabangOlahraga;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CaborRequest;
+use App\JadwalLatihan;
 use App\Pelatih;
 use App\Pemain;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class CabangOlahragaController extends Controller
@@ -44,12 +46,35 @@ class CabangOlahragaController extends Controller
      */
     public function store(CaborRequest $request)
     {
-      $data = $request->all();
-      CabangOlahraga::create($data);
+        $data = $request->all();
+        // dd($data);
 
-      Alert::success('Selamat', 'Data Berhasil Ditambahkan');
+        $data = new CabangOlahraga;
+        $data->nama_cabor = $request['nama_cabor'];
+        $data->tempat_latihan = $request['tempat_latihan'];
+        $data->save();
 
-      return redirect()->route('cabang-olahraga.index');
+        $validator = Validator::make($request->all(), [
+            'tanggal_latihan.*' => 'required',
+        ]);
+
+        if($validator->fails()) {
+            return back()->withInput()->withErrors($validator->errors());
+            }
+
+        if(count($request['tanggal_latihan'] > 0)){
+            foreach($request['tanggal_latihan'] as $item => $v){
+                $data2 = array(
+                    'cabang_olahraga_id' => $data->cabang_olahraga_id,
+                    'tanggal_latihan' => $request['tanggal_latihan'][$item],
+                );
+                JadwalLatihan::create($data2);
+            }
+        }
+
+        Alert::success('Selamat', 'Data Berhasil Ditambahkan');
+
+        return redirect()->route('cabang-olahraga.index');
     }
 
     /**

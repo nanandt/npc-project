@@ -41,15 +41,104 @@
                 <div class="col-12 col-xl-8">
                     <!-- About Us Content -->
                     <div class="about-us-content bg-white mb-30 p-30 box-shadow">
-                        @foreach ($cabors as $cabor)
 
-                        <button class="accordion">JADWAL LATIHAN {{ $cabor->nama_cabor }}</button>
+                        <button class="accordion">JADWAL LATIHAN ATLETIK</button>
                         <div class="panel">
                             <ul>
-                                <li><i class="fa fa-check"></i>{{ \Carbon\carbon::create($cabor->jadwal_latihan)->format('d F, Y') }} - {{ $cabor->tempat_latihan }}</li>
+                                <li><i class="fa fa-check"></i>SENIN - 15:30 s/d 17:30 - NOMOR LARI GOR WIBAWAMUKTI DAN NOMOR LEMPAR STD MINI CIKARANG</li>
+                                <li><i class="fa fa-check"></i>SELASA - 15:30 s/d 17:30 - NOMOR LARI GOR WIBAWAMUKTI DAN NOMOR LEMPAR STD MINI CIKARANG</li>
+                                <li><i class="fa fa-check"></i>KAMIS - 15:30 s/d 17:30 - NOMOR LARI GOR WIBAWAMUKTI DAN NOMOR LEMPAR STD MINI CIKARANG</li>
+                                <li><i class="fa fa-check"></i>SABTU - 07:30 s/d 17:30 - GOR WIBAWAMUKTI</li>
                             </ul>
                         </div>
-                        @endforeach
+
+                        <button class="accordion">JADWAL LATIHAN RENANG</button>
+                        <div class="panel">
+                            <ul>
+                                <li><i class="fa fa-check"></i>SELASA - 16:00 s/d 18:00 - KOLAM RENANG WIBAWA MUKTI</li>
+                                <li><i class="fa fa-check"></i>KAMIS - 16:00 s/d 18:00 - KOLAM RENANG WIBAWA MUKTI</li>
+                                <li><i class="fa fa-check"></i>SABTU - 16:00 s/d 18:00 - KOLAM RENANG WIBAWA MUKTI</li>
+                            </ul>
+                        </div>
+
+                        <button class="accordion">JADWAL LATIHAN PANAHAN</button>
+                        <div class="panel">
+                            <ul>
+                                <li><i class="fa fa-check"></i>SABTU - 15:30 s/d 17:30 - LAPANGAN PANAHAN WIBAWAMUKTI</li>
+                                <li><i class="fa fa-check"></i>MINGGU - 08:00 s/d 11:00 - LAPANGAN PANAHAN WIBAWAMUKTI</li>
+                            </ul>
+                        </div>
+
+                        <button class="accordion">JADWAL LATIHAN BULU TANGKIS</button>
+                        <div class="panel">
+                            <ul>
+                                <li><i class="fa fa-check"></i>RABU - 08:00 s/d 11:00 - GOR BULU TANGKIS WIBAWAMUKTI</li>
+                                <li><i class="fa fa-check"></i>SABTU - 08:00 s/d 11:00 - GOR BULU TANGKIS WIBAWAMUKTI</li>
+                            </ul>
+                        </div>
+
+                        <button class="accordion">JADWAL LATIHAN CATUR</button>
+                        <div class="panel">
+                            <ul>
+                                <li><i class="fa fa-check"></i>SABTU - 10:00 s/d 12:00 - KANTOR SEKERTARIAT NPCI KAB. BEKASI</li>
+                                <li><i class="fa fa-check"></i>SABTU - 13:00 s/d 15:30 - KANTOR SEKERTARIAT NPCI KAB. BEKASI</li>
+                            </ul>
+                        </div>
+
+                        <button class="accordion">JADWAL LATIHAN TENIS MEJA</button>
+                        <div class="panel">
+                            <ul>
+                                <li><i class="fa fa-check"></i>SELASA - 15:30 s/d 17:30 - LAPANGAN TENIS MEJA NPCI KAB. BEKASI WIBAWAMUKTI</li>
+                                <li><i class="fa fa-check"></i>KAMIS - 15:30 s/d 17:30 - LAPANGAN TENIS MEJA NPCI KAB. BEKASI WIBAWAMUKTI</li>
+                                <li><i class="fa fa-check"></i>SABTU - 08:00 s/d 11:00 - LAPANGAN TENIS MEJA NPCI KAB. BEKASI WIBAWAMUKTI</li>
+                            </ul>
+                        </div>
+
+                        <button class="accordion">JADWAL LATIHAN BALAP SEPEDA</button>
+                        <div class="panel">
+                            <ul>
+                                <li><i class="fa fa-check"></i>SENIN - 16:00 s/d 17:30 - GOR WIBAWAMUKTI</li>
+                                <li><i class="fa fa-check"></i>RABU - 16:00 s/d 17:30 - GOR WIBAWAMUKTI</li>
+                                <li><i class="fa fa-check"></i>JUMAT - 16:00 s/d 17:30 - GOR WIBAWAMUKTI</li>
+                            </ul>
+                        </div>
+
+                        <button class="accordion">JADWAL LATIHAN MENEMBAK</button>
+                        <div class="panel">
+                            <ul>
+                                <li><i class="fa fa-check"></i>SABTU - 14:00 s/d 16:00 - GOR PERBAKIN WIBAWAMUKTI</li>
+                                <li><i class="fa fa-check"></i>MINGGU - 09:00 s/d 11:00 - GOR PERBAKIN WIBAWAMUKTI</li>
+                            </ul>
+                        </div>
+
+                        <button class="accordion">JADWAL LATIHAN VOLI DUDUK</button>
+                        <div class="panel">
+                            <ul>
+                                <li><i class="fa fa-check"></i>SABTU - 08:00 s/d 10:30 - LAPANGAN VOLI DUDUK NPCI KAB. BEKASI</li>
+                                <li><i class="fa fa-check"></i>MINGGU - 08:00 s/d 10:30 - LAPANGAN VOLI DUDUK NPCI KAB. BEKASI</li>
+                            </ul>
+                        </div>
+
+                        <button class="accordion">JADWAL LATIHAN GOAL BALL</button>
+                        <div class="panel">
+                            <ul>
+                                <li><i class="fa fa-check"></i>SELASA - 15:30 s/d 17:30 - LAPANGAN GOAL BALL NPCI KAB. BEKASI</li>
+                                <li><i class="fa fa-check"></i>KAMIS - 15:30 s/d 17:30 - LAPANGAN GOAL BALL NPCI KAB. BEKASI</li>
+                                <li><i class="fa fa-check"></i>SABTU - 13:00 s/d 15:00 - LAPANGAN GOAL BALL NPCI KAB. BEKASI</li>
+                            </ul>
+                        </div>
+
+                        <button class="accordion">JADWAL LATIHAN ANGKAT BERAT</button>
+                        <div class="panel">
+                            <ul>
+                                <li><i class="fa fa-check"></i>SENIN - 16:00 s/d 17:30 - GOR WIBAWAMUKTI</li>
+                                <li><i class="fa fa-check"></i>SELASA - 16:00 s/d 17:30 - GOR WIBAWAMUKTI</li>
+                                <li><i class="fa fa-check"></i>RABU - 16:00 s/d 17:30 - GOR WIBAWAMUKTI</li>
+                                <li><i class="fa fa-check"></i>JUMAT - 16:00 s/d 17:30 - GOR WIBAWAMUKTI</li>
+                                <li><i class="fa fa-check"></i>SABTU - 16:00 s/d 17:30 - GOR WIBAWAMUKTI</li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
 

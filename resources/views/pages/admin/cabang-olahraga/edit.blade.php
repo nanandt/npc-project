@@ -25,7 +25,7 @@
 
         <div class="form-group">
           <label for="jadwal_latihan">Jadwal Latihan</label>
-          <input type="date" class="form-control @error('jadwal_latihan') is-invalid @enderror" name="jadwal_latihan" placeholder="Jadwal Latihan" value="{{ $item->jadwal_latihan }}">
+          <input type="datetime-local" class="form-control @error('jadwal_latihan') is-invalid @enderror" name="jadwal_latihan" placeholder="Jadwal Latihan" value="{{ $item->jadwal_latihan }}">
           @error('jadwal_latihan')
           <div class="invalid-feedback">
               {{ $message }}

@@ -10,7 +10,7 @@ class CabangOlahraga extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['nama_cabor', 'jadwal_latihan', 'tempat_latihan'];
+    protected $fillable = ['nama_cabor', 'tempat_latihan'];
 
     protected $hidden = [];
 
@@ -28,5 +28,10 @@ class CabangOlahraga extends Model
     public function galleries()
     {
         return $this->hasMany(Gallery::class, 'cabang_olahraga_id', 'cabang_olahraga_id');
+    }
+
+    public function jadwal_latihans()
+    {
+        return $this->hasMany(JadwalLatihan::class, 'cabang_olahraga_id', 'cabang_olahraga_id');
     }
 }

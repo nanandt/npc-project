@@ -58,7 +58,7 @@
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                             </div>
                             <div class="text">
-                                <p>Our Office:</p>
+                                <p>Alamat:</p>
                                 <h6>Sekretariat: GOR Wibawa Mukti Jl. Science Boulevard, Sertajaya, Sertajaya, Kec. Cikarang Tim., Bekasi, Jawa Barat 17530</h6>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                             </div>
                             <div class="text">
                                 <p>Email:</p>
-                                <h6>@gmail.com</h6>
+                                <a href="mailto:nationalparalympic@gmail.com?" targer="_blank" rel="nofollow">nationalparalympic@gmail.com</a>
                             </div>
                         </div>
 
@@ -81,7 +81,7 @@
                             </div>
                             <div class="text">
                                 <p>Phone:</p>
-                                <h6>08986392736</h6>
+                                <h6>087878677472</h6>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,7 @@
 @extends('layouts.admin')
-
+@section('title')
+Cabang Olahraga
+@endsection
 @section('content')
 <!-- Begin Page Content -->
   <div class="container-fluid">

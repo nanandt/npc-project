@@ -6,3 +6,6 @@
 <link href="{{ url('backend/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
 <link href="{{ url('backend/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+
+<!-- Favicon -->
+<link rel="icon" href="{{ url('frontend/img/core-img/favicon.ico') }}">

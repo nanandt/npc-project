@@ -1,5 +1,7 @@
 @extends('layouts.admin')
-
+@section('title')
+Artikel
+@endsection
 @section('content')
 <!-- Begin Page Content -->
   <div class="container-fluid">
@@ -41,7 +43,7 @@
                   <a href="{{ route('posts.edit', $item->post_id) }}" class="btn btn-info">
                     <i class="fa fa-pencil-alt"></i>
                   </a>
-                  <form action="{{ route('posts.destroy', $item->post_id) }}" method="POST"
+                  <form action="{{ route('posts.edit', $item->post_id) }}" method="POST"
                     class="d-inline">
                     @csrf
                     @method('delete')

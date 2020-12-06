@@ -78,7 +78,7 @@ class PlayerController extends Controller
 
             if($validator->fails()) {
             return back()->withInput()->withErrors($validator->errors());
-  }
+            }
         if(count($request['prestasi'] > 0)){
             foreach($request['prestasi'] as $item => $v){
                 $data2 = array(

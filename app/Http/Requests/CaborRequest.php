@@ -25,8 +25,6 @@ class CaborRequest extends FormRequest
     {
         return [
             'nama_cabor' => 'required',
-            'jadwal_latihan' => 'required',
-            'tempat_latihan' => 'required'
         ];
     }
 }
