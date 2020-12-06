@@ -138,7 +138,6 @@
                                 <li><i class="fa fa-check"></i>SABTU - 16:00 s/d 17:30 - GOR WIBAWAMUKTI</li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
 
@@ -158,7 +157,7 @@
                                 <a href="#" class="youtube-subscribers"><i class="fa fa-youtube"></i>YouTube</a>
                                 <!-- Google -->
                                 <a href="#" class="google-followers"><i class="fa fa-google-plus"></i>Google</a>
-                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br>
                             </div>
                         </div>
                     </div>

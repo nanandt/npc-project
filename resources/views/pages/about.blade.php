@@ -44,14 +44,10 @@
                     <div class="section-heading">
                         <h5>About Us</h5>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur mauris id scelerisque eleifend. Nunc vestibulum cursus quam at scelerisque. Aliquam quis varius orci, vel tincidunt est. Proin ac tincidunti, atmots interdum erat. Maecenas neque lorem, aliquet in tempus non, efficitur ac neque.</p>
-                    <p>Phasellus elefend odio quis dolor pretium condimentu. Morbi quis mauris ipsum urna eu fermentum bentons Suspendisse auctor magna ac porta ornare. Fusce finibus nibh at lacinia lobortis.</p>
-                    <ul>
-                        <li><i class="fa fa-check"></i> Vivamus starlord finibus, dictum massa eget, suscipit metus nami at tristique elit started.</li>
-                        <li><i class="fa fa-check"></i> Cras ipsum libero, suscipit vitamin tellus vitae, feugiat ultricies purus praesent gamora.</li>
-                        <li><i class="fa fa-check"></i> Proin ex sem, ultrices drax the sit amet, facilisis destroyer et odio profession risusest.</li>
-                        <li><i class="fa fa-check"></i> Morbi maximus mauris eget groot dignissim, in laoreet justo facilisis.</li>
-                    </ul>
+                    <p style="text-align:justify;">Atas saran Prof. Dr. Soeharso, pendiri Rehabilitas Cacat yang kini berganti nama menjadi Balai Besar Rehabilitas Sosial Bina Daksa, Pada tanggal 31 Oktober 1962, Pairan Manurung mendirikan sebuah orgnisasi beranama Yayasan Pembina Olahraga Cacat (YPAC) di Surakarta, Jawa Tengah, Indonesia. Dalam perkembangannya yayasan ini berhasil membina beberapa atlit penyandang disabilitas di masanya.</p>
+                    <p style="text-align:justify;">Pada Musyawarah Olahraga Nasional yang diselenggarakan di Yogyakarta pada tanggal 31 Oktober - 1 November 1993, beberapa orang menyarankan mengganti nama YPAC menjadi Badan Pembina Olahraga Cacat (BPOC). Maka sejak tanggal 31 Oktober 1993 itulah nama BPOC digunakan dengan tujuan supaya organisasi ini nantinya bisa mendapatkan bantuan dana dari Pemerintah.</p>
+                    <p style="text-align:justify;">Berdasarkan Keputusan yang dibuat pada International Paralympic Committee (IPC) General Assembly pada tanggal 18 November 2005, yang menwajibkan para anggotanya untuk mamekai kata 'paralympic' untuk gerakan dan kegiatan yang berkaitan dengan olahraga penyandang disabilitas, maka BPOC yang kala itu sudah menjadi anggotanya pun kemudian berganti nama menjadi National Paralympic Committee of Indonesia (NPC). Hingga kini nama itulah yang digunakan sebagai nama resmi organisasi dan telah diakui legalitasnya oleh IPC dan Pemerintah Republik Indonesia sebagai induk organisasi pembinaan olahraga untuk penyandang disabilitas di Indonesia.</p>
+                    <p style="text-align:justify;">Berbagai halangan dan tantangan telah dilalui oleh organisasi ini. Hingga saat ini NPC Indonesia telah resmi menjadi anggota dari beberapa organisasi olahraga penyandang disabilitas baik di tingkat regional maupun international seperti misalnya, IPC, Asian Paralympic Committee, Asean Para Sport Federation, dll. National Paralympic Committee of Indonesia senantiasa berjuang untuk membina atlit - atlit penyandang disabilitas Indonesia hingga kini telah banyak prestasi yang diraih dalam berbagai kompetisi baik di tingkat regional maupun international.</p>
                 </div>
             </div>
 
@@ -71,6 +67,7 @@
                             <a href="#" class="youtube-subscribers"><i class="fa fa-youtube"></i>YouTube</a>
                             <!-- Google -->
                             <a href="#" class="google-followers"><i class="fa fa-google"></i>Gmail</a>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                         </div>
                     </div>
                 </div>

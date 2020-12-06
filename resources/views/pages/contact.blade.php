@@ -59,7 +59,7 @@
                             </div>
                             <div class="text">
                                 <p>Alamat:</p>
-                                <h6>Sekretariat: GOR Wibawa Mukti Jl. Science Boulevard, Sertajaya, Sertajaya, Kec. Cikarang Tim., Bekasi, Jawa Barat 17530</h6>
+                                <a href="https://goo.gl/maps/svY2sjV4S7wB8Q4F6" target="_blank" rel="nofollow">Sekretariat: GOR Wibawa Mukti Jl. Science Boulevard, Sertajaya, Sertajaya, Kec. Cikarang Tim., Bekasi, Jawa Barat 17530</a>
                             </div>
                         </div>
 
@@ -70,7 +70,7 @@
                             </div>
                             <div class="text">
                                 <p>Email:</p>
-                                <a href="mailto:nationalparalympic@gmail.com?" targer="_blank" rel="nofollow">nationalparalympic@gmail.com</a>
+                                <a href="mailto:nationalparalympic@gmail.com?" target="_blank" rel="nofollow">nationalparalympic@gmail.com</a>
                             </div>
                         </div>
 
@@ -81,7 +81,7 @@
                             </div>
                             <div class="text">
                                 <p>Phone:</p>
-                                <h6>087878677472</h6>
+                                <a href="https://api.whatsapp.com/send?phone=6287878677472" target="_blank" rel="nofollow">087878677472</a>
                             </div>
                         </div>
                     </div>
@@ -134,6 +134,7 @@
                             <a href="#" class="youtube-subscribers"><i class="fa fa-youtube"></i>Youtube</a>
                             <!-- Google -->
                             <a href="#" class="google-followers"><i class="fa fa-google-plus"></i>Google</a>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                         </div>
                     </div>
                 </div>
