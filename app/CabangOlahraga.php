@@ -10,7 +10,7 @@ class CabangOlahraga extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['nama_cabor', 'tempat_latihan'];
+    protected $fillable = ['nama_cabor'];
 
     protected $hidden = [];
 

@@ -22,26 +22,6 @@
             </div>
           @enderror
         </div>
-
-        <div class="form-group">
-          <label for="jadwal_latihan">Jadwal Latihan</label>
-          <input type="datetime-local" class="form-control @error('jadwal_latihan') is-invalid @enderror" name="jadwal_latihan" placeholder="Jadwal Latihan" value="{{ $item->jadwal_latihan }}">
-          @error('jadwal_latihan')
-          <div class="invalid-feedback">
-              {{ $message }}
-              </div>
-          @enderror
-        </div>
-
-        <div class="form-group">
-          <label for="tempat_latihan">Tempat Latihan</label>
-          <input type="text" class="form-control @error('tempat_latihan') is-invalid @enderror" name="tempat_latihan" value="{{ $item->tempat_latihan }}">
-          @error('tempat_latihan')
-          <div class="invalid-feedback">
-            {{ $message }}
-            </div>
-          @enderror
-        </div>
         <button type="submit" class="btn btn-primary btn-block">
           Simpan
         </button>

@@ -15,7 +15,7 @@ class CreateDetailPelatihsTable extends Migration
     {
         Schema::create('detail_pelatihs', function (Blueprint $table) {
             $table->id();
-            $table->string('pelatih_id');
+            $table->integer('pelatih_id');
             $table->string('prestasi');
             $table->string('pertandingan_mengesankan');
             $table->string('pertandingan_mengecewakan');

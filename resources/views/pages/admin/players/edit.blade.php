@@ -47,7 +47,7 @@
 
         <div class="form-group">
             <label for="prestasi">Prestasi</label>
-            <input type="text" class="form-control @error('prestasi') is-invalid @enderror" name="prestasi" placeholder="Nama Pemain" value="{{ $item->prestasi }}">
+            <input type="text" class="form-control @error('prestasi') is-invalid @enderror" name="prestasi" placeholder="Prestasi" value="{{ $item->prestasi }}">
             @error('prestasi')
             <div class="invalid-feedback">
             {{ $message }}

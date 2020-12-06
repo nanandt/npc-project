@@ -18,7 +18,7 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $items = Gallery::with('cabor')->get();
+        $items = Gallery::with(['cabor'])->get();
         return view('pages.admin.gallery.index',[
             'items' => $items
         ]);

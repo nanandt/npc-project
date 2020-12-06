@@ -38,16 +38,16 @@ Pemain
                     <td>{{ $item->email }}</td>
                     <td>{{ $item->cabang_olahraga->nama_cabor }}</td>
                     <td>
-                    <img src="{{ Storage::url($item->thumbnail) }}" style="width:150px"
+                    <img src="{{ Storage::url($item->thumbnail) }}" style="max-width:150px"
                         class="img-thumbnail">
                     </td>
                     <td>
                     <a href="{{ route('players.edit', $item->pemain_id) }}" class="btn btn-warning">
                         <i class="fa fa-pencil-alt"></i>
                     </a>
-                    <a href="{{ route('players.show', $item->pemain_id) }}" class="btn btn-info">
+                    {{-- <a href="{{ route('players.show', $item->pemain_id) }}" class="btn btn-info">
                         <i class="fa fa-eye"></i>
-                    </a>
+                    </a> --}}
                     <form action="{{ route('players.destroy', $item->pemain_id) }}" method="POST"
                         class="d-inline">
                         @csrf

@@ -23,8 +23,6 @@ Cabang Olahraga
               <tr>
                 <th>No</th>
                 <th>Jenis Cabang Olahraga</th>
-                <th>Jadwal Latihan</th>
-                <th>Tempat Latihan</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -33,8 +31,6 @@ Cabang Olahraga
               <tr>
                 <td>{{ $item->cabang_olahraga_id }}</td>
                 <td>{{ $item->nama_cabor }}</td>
-                <td>{{ $item->jadwal_latihan }}</td>
-                <td>{{ $item->tempat_latihan }}</td>
                 <td>
                   <a href="{{ route('cabang-olahraga.edit', $item->cabang_olahraga_id) }}" class="btn btn-info">
                     <i class="fa fa-pencil-alt"></i>
