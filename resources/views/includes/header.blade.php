@@ -48,8 +48,13 @@
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="#">Galeri</a>
                                         <ul class="dropdown">
-                                            <li><a href="{{ route('foto') }}">FOTO</a></li>
-                                            <li><a href="{{ route('video') }}">VIDEO</a></li>
+                                            <li class="nav-item">
+                                                <a class="{{ request()->is('foto') ? ' nav-link' : '' }}" href="{{ route('foto') }}">FOTO</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="{{ request()->is('video') ? ' nav-link' : '' }}" href="{{ route('video') }}">VIDEO</a>
+                                            </li>
+
                                         </ul>
                                     </li>
                                     <li class="nav-item {{ request()->is('berita') ? ' active' : '' }}"><a class="nav-link" href="{{ route('berita') }}">Berita</a></li>
