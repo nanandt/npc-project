@@ -1,5 +1,5 @@
 @extends('layouts.default')
-@section('title', 'Foto')
+@section('title', 'Video')
 
 @section('content')
 <!-- ##### Breadcrumb Area Start ##### -->

@@ -26,7 +26,7 @@ class DeleteFieldJadwalLatihanAtCabangOlahragasTable extends Migration
     public function down()
     {
         Schema::table('cabang_olahragas', function (Blueprint $table) {
-            $table->date('jadwal_latihan');
+            $table->date('jadwal_latihan')->nullable();
         });
     }
 }
