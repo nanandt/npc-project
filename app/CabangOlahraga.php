@@ -25,13 +25,4 @@ class CabangOlahraga extends Model
     {
         return $this->hasMany(Pelatih::class, 'cabang_olahraga_id', 'cabang_olahraga_id');
     }
-    public function galleries()
-    {
-        return $this->hasMany(Gallery::class, 'cabang_olahraga_id', 'cabang_olahraga_id');
-    }
-
-    public function jadwal_latihans()
-    {
-        return $this->hasMany(JadwalLatihan::class, 'cabang_olahraga_id', 'cabang_olahraga_id');
-    }
 }

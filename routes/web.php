@@ -71,8 +71,7 @@ Route::prefix('admin')
         Route::resource('cabang-olahraga', CabangOlahragaController::class);
         Route::resource('players', PlayerController::class);
         Route::resource('coachs', CoachController::class);
-        Route::resource('gallery', GalleryController::class);
-    //   Route::resource('videos', VideoController::class);
+        Route::resource('photos', FotoController::class);
 });
 
 Auth::routes();

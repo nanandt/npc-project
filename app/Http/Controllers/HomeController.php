@@ -22,8 +22,6 @@ class HomeController extends Controller
         $randoms = Post::inRandomOrder()->take(5)->get();
 
         $items = Post::latest()->limit(5)->get();
-
-        $videos = Gallery::all();
         return view('pages.home', [
             'cabors' => $cabors,
             'lates' => $lates,

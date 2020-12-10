@@ -44,10 +44,10 @@
       <i class="fas fa-fw fa-user"></i>
       <span>Pelatih</span></a>
   </li>
-  <li class="nav-item  {{ request()->is('admin/gallery*') ? ' active' : '' }}">
-    <a class="nav-link" href="{{ route('gallery.index') }}">
-      <i class="fas fa-fw fa-user"></i>
-      <span>Gallery</span></a>
+  <li class="nav-item  {{ request()->is('admin/photos*') ? ' active' : '' }}">
+    <a class="nav-link" href="{{ route('photos.index') }}">
+      <i class="fas fa-fw fa-camera"></i>
+      <span>Foto</span></a>
   </li>
   {{-- <li class="nav-item">
     <a class="nav-link" href="{{ route('videos.index') }}">

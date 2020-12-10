@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('title')
-Gallery
+Foto
 @endsection
 @section('content')
 <!-- Begin Page Content -->
@@ -8,24 +8,21 @@ Gallery
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-      <h1 class="h3 mb-0 text-gray-800">Data Gallery</h1>
-      <a href="{{ route('gallery.create') }}" class="btn btn-sm btn-primary shadow-sm">
+      <h1 class="h3 mb-0 text-gray-800">Data Foto</h1>
+      <a href="{{ route('photos.create') }}" class="btn btn-sm btn-primary shadow-sm">
         <i class="fas fa-plus fa-sm text-white-50"></i>
-        Tambah Gallery
+        Tambah Foto
       </a>
     </div>
 
-    <div class="card shadow mb-4">
-    <div class="card-header py-4"></div>
+    <div class="row">
       <div class="card-body">
         <div class="table-responsive">
-          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <table class="table table-bordered" width="100%">
             <thead>
               <tr>
-                <th>ID</th>
-                <th>Nama Cabor</th>
+                <th>No</th>
                 <th>Foto</th>
-                <th>Video</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -33,21 +30,14 @@ Gallery
               @forelse ($items as $item)
               <tr>
                 <td>{{ $item->id }}</td>
-                <td>{{ $item->cabor->nama_cabor }}</td>
                 <td>
-                  <img src="{{ Storage::url($item->foto) }}" style="width:150px"
-                    class="img-thumbnail">
+                    <img src="{{ Storage::url($item->foto) }}" style="max-width: 150px" class="img-thumbnail">
                 </td>
                 <td>
-                    <video width="215" controls>
-                        <source src="{{ Storage::url($item->video) }}" type="video/mp4">
-                    </video>
-                </td>
-                <td>
-                  <a href="{{ route('gallery.edit', $item->id) }}" class="btn btn-info">
+                  <a href="{{ route('photos.edit', $item->id) }}" class="btn btn-info">
                     <i class="fa fa-pencil-alt"></i>
                   </a>
-                  <form action="{{ route('gallery.destroy', $item->id) }}" method="POST"
+                  <form action="{{ route('photos.destroy', $item->id) }}" method="POST"
                     class="d-inline">
                     @csrf
                     @method('delete')
