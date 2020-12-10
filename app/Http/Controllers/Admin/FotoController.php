@@ -39,7 +39,6 @@ class FotoController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
         $data = $request->validate([
             'foto' => 'required|mimes:jpg,png,svg|max:2048'
         ]);
@@ -72,7 +71,8 @@ class FotoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = Photo::findOrFail($id);
+        return view('pages.admin.photos.edit', compact('item'));
     }
 
     /**
@@ -84,7 +84,19 @@ class FotoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->validate([
+            'foto' => 'required|mimes:jpg,png,svg|max:2048'
+        ]);
+        $data['foto'] = $request->file('foto')->store('assets/foto', 'public');
+
+        $item = Photo::findOrFail($id);
+
+        $item->update($data);
+
+        Alert::success('Selamat', 'Data Berhasil Ditambahkan');
+
+        return redirect()->route('photos.index');
+
     }
 
     /**
@@ -95,6 +107,12 @@ class FotoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Photo::findOrFail($id);
+
+        $item->delete();
+
+        Alert::success('Selamat', 'Data Berhasil Dihapus');
+
+        return redirect()->route('photos.index');
     }
 }
