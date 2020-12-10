@@ -223,11 +223,12 @@
                     </div>
                 </div>
 
-                @foreach ($videos as $item)
+                @foreach ($photos as $item)
                 <!-- Single Blog Post -->
                 <div class="single-blog-post style-4">
                     <div class="post-thumbnail">
-                        <a href="foto.html"><img src="{{ Storage::url($item->foto) }}" alt=""></a>
+                        <a href="foto.html"><img src="{{ Storage::url($item->foto) }}" style="height: 150px;
+                                                                                                width: 200px;"></a>
                     </div>
                 </div>
                 @endforeach

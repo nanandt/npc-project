@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\{CabangOlahraga, Gallery, Post};
+use App\{CabangOlahraga, Gallery, Photo, Post};
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -22,12 +22,13 @@ class HomeController extends Controller
         $randoms = Post::inRandomOrder()->take(5)->get();
 
         $items = Post::latest()->limit(5)->get();
+        $photos = Photo::all();
         return view('pages.home', [
             'cabors' => $cabors,
             'lates' => $lates,
             'randoms' => $randoms,
             'items' => $items,
-            'videos' => $videos
+            'photos' => $photos
         ]);
     }
 }
