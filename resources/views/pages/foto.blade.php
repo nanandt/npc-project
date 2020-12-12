@@ -83,7 +83,7 @@
                         <table style="cursor: pointer;">
                             <tr>
                                 @foreach ($items as $item)
-                                  <td>
+                                <td>
                                     <div class="container-overlay">
                                         <a href="{{ route('detail-foto', $item->nama_cabor) }}">
                                         <img src="{{ $item->galleries->count() ? Storage::url($item->galleries->first()->foto) : '' }}" alt="" width="215">
@@ -98,7 +98,7 @@
                 </div>
 
                     <!-- >>>>>>>>>>>>>>>>>>>>
-                     Post Right Sidebar Area
+                    Post Right Sidebar Area
                     <<<<<<<<<<<<<<<<<<<<< -->
                     <div class="post-sidebar-area right-sidebar mt-10 mb-30 box-shadow">
                         <!-- Sidebar Widget -->
