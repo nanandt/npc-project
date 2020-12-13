@@ -157,15 +157,16 @@
                         <div class="single-featured-post">
                             <!-- Thumbnail -->
                             <div class="post-thumbnail mb-50">
-                                <a href="#"><img src="{{('frontend/img/bg-img/22.jpg')}}" alt=""></a>
+                                <a href="{{ route('artikel', $item->slug) }}">
+                                <img src="{{ $item->photo ? Storage::url($item->photo) : '' }}" alt=""></a>
                             </div>
                             <!-- Post Contetnt -->
                             <div class="post-content">
                                 <div class="post-meta">
-                                    <a href="#">MAY 8, 2018</a>
+                                    <a href="#">{{ $item->created_at->isoFormat('D MMMM Y') }}</a>
                                 </div>
-                                <a href="#" class="post-title">A Closer Look At Our Front Porch Items From Lowe’login.html</a>
-                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+                                <a href="{{ route('artikel', $item->slug) }}" class="post-title">{{ $item->title }}
+                                <p>{!! Str::limit($item->body, 60, '') !!}</p></a>
                             </div>
                         </div>
                     </div>
@@ -216,13 +217,6 @@
 
             <div class="most-viewed-videos-slide owl-carousel">
 
-                <!-- Single Blog Post -->
-                <div class="single-blog-post style-4">
-                    <div class="post-thumbnail">
-                        <a href="foto.html"><img src="img/bg-img/28.jpg" alt=""></a>
-                    </div>
-                </div>
-
                 @foreach ($photos as $item)
                 <!-- Single Blog Post -->
                 <div class="single-blog-post style-4">
@@ -232,34 +226,6 @@
                     </div>
                 </div>
                 @endforeach
-
-                {{-- <!-- Single Blog Post -->
-                <div class="single-blog-post style-4">
-                    <div class="post-thumbnail">
-                        <a href="foto.html"><img src="img/bg-img/30.jpg" alt=""></a>
-                    </div>
-                </div>
-
-                <!-- Single Blog Post -->
-                <div class="single-blog-post style-4">
-                    <div class="post-thumbnail">
-                        <a href="foto.html"><img src="img/bg-img/28.jpg" alt=""></a>
-                    </div>
-                </div>
-
-                <!-- Single Blog Post -->
-                <div class="single-blog-post style-4">
-                    <div class="post-thumbnail">
-                        <a href="foto.html"><img src="img/bg-img/29.jpg" alt=""></a>
-                    </div>
-                </div>
-
-                <!-- Single Blog Post -->
-                <div class="single-blog-post style-4">
-                    <div class="post-thumbnail">
-                        <a href="foto.html"><img src="img/bg-img/30.jpg" alt=""></a>
-                    </div>
-                </div> --}}
             </div>
 
             <br><br>
@@ -291,25 +257,6 @@
                     </div>
                 </div>
                 @endforeach
-
-
-                {{-- <!-- Single Featured Post -->
-                <div class="single-featured-post">
-                    <!-- Thumbnail -->
-                    <div class="post-thumbnail mb-50">
-                        <img src="#" alt="">
-                        <a href="#" target="_blank" rel="nofollow" class="video-play"><i class="fa fa-play" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Featured Post -->
-                <div class="single-featured-post">
-                    <!-- Thumbnail -->
-                    <div class="post-thumbnail mb-50">
-                        <img src="#" alt="">
-                        <a href="#" target="_blank" rel="nofollow" class="video-play"><i class="fa fa-play" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></i></a>
-                    </div>
-                </div> --}}
             </div>
 
             <div class="row">

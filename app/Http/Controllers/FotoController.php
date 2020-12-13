@@ -3,19 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\CabangOlahraga;
+use App\Photo;
 use Illuminate\Http\Request;
 
 class FotoController extends Controller
 {
     public function index()
     {
-        $cabors = CabangOlahraga::with(['pemains', 'pelatihs', 'galleries'])->get();
-        $cabors1 = CabangOlahraga::with(['pemains', 'pelatihs'])->take(3)->get();
-        $items = CabangOlahraga::with(['pemains', 'pelatihs', 'galleries'])->skip(3)->take(3)->get();
+        $cabors = CabangOlahraga::with(['pemains', 'pelatihs'])->get();
+        
+        $items = Photo::latest()->take(3)->get();
+        $items1 = Photo::take(3)->get();
+        $items2 = Photo::skip(3)->take(3)->get();
+        
+        
         return view('pages.foto', [
-            'cabors1' => $cabors1,
+            'cabors' => $cabors,
             'items' => $items,
-            'cabors' => $cabors
+            'items1' => $items1,
+            'items2' => $items2
         ]);
     }
 }

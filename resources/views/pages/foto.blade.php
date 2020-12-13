@@ -44,51 +44,41 @@
                         <div class="section-heading">
                             <h5>FOTO</h5>
                         </div>
+                        
                         <table style="cursor: pointer;">
                             <tr>
-                                @foreach ($cabors as $cabor)
+                                @foreach ($items as $gallery)
                                 <td>
-                                    <div class="container-overlay">
-                                        <a href="{{ route('detail-foto', $cabor->nama_cabor) }}">
-                                        <img src="{{ $cabor->galleries->count() ? Storage::url($cabor->galleries->first()->foto) : '' }}" alt="" width="215">
-                                        <div class="overlay">{{ $cabor->nama_cabor }}</div></a>
-                                    </div>
+                                    <a href="{{ Storage::url($gallery->foto) }}">
+                                    <img src="{{ Storage::url($gallery->foto) }}" width="215" alt=""></a>
                                 </td>
                                 <td>&nbsp;</td>
                                 @endforeach
-
-                                {{-- @foreach ($items as $item)
-                                  <td>
-                                    <div class="container-overlay">
-                                        <a href="#">
-                                        <img src="{{ $item->galleries->count() ? Storage::url($item->galleries->first()->foto) : '' }}" alt="" width="215">
-                                        <div class="overlay">{{ $item->nama_cabor }}</div></a>
-                                    </div>
-                                </td>
-
-                                <td>&nbsp;</td>
-                                @endforeach --}}
-
-
-                                {{-- <td>
-                                    <div class="container-overlay">
-                                        <a href="#">
-                                        <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
-                                        <div class="overlay">Bulu Tangkis</div></a>
-                                    </div>
-                                </td> --}}
                             </tr>
                         </table>
 
+                        <br>
+
                         <table style="cursor: pointer;">
                             <tr>
-                                @foreach ($items as $item)
+                                @foreach ($items1 as $gallery)
                                 <td>
-                                    <div class="container-overlay">
-                                        <a href="{{ route('detail-foto', $item->nama_cabor) }}">
-                                        <img src="{{ $item->galleries->count() ? Storage::url($item->galleries->first()->foto) : '' }}" alt="" width="215">
-                                        <div class="overlay">{{ $item->nama_cabor }}</div></a>
-                                    </div>
+                                    <a href="{{ Storage::url($gallery->foto) }}">
+                                    <img src="{{ Storage::url($gallery->foto) }}" width="215" alt=""></a>
+                                </td>
+                                <td>&nbsp;</td>
+                                @endforeach
+                            </tr>
+                        </table>
+
+                        <br>
+
+                        <table style="cursor: pointer;">
+                            <tr>
+                                @foreach ($items2 as $gallery)
+                                <td>
+                                    <a href="{{ Storage::url($gallery->foto) }}">
+                                    <img src="{{ Storage::url($gallery->foto) }}" width="215" alt=""></a>
                                 </td>
                                 <td>&nbsp;</td>
                                 @endforeach
@@ -118,6 +108,7 @@
                             </div>
                         </div>
                     </div>
+            </div>
         </section>
     <!-- ##### About Us Area End ##### -->
 
