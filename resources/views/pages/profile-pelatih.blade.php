@@ -11,10 +11,8 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Cabang Olahraga</li>
-                        <li class="breadcrumb-item active" aria-current="page">Atletik</li>
-                        <li class="breadcrumb-item active" aria-current="page">Pemain</li>
-                        <li class="breadcrumb-item active" aria-current="page">Profil</li>
+                        <li class="breadcrumb-item active" aria-current="page">Pelatih</li>
+                        <li class="breadcrumb-item active" aria-current="page">Profil Pelatih</li>
                     </ol>
                 </nav>
             </div>
@@ -77,7 +75,7 @@
                             <!-- Profil Pemain -->
                             <div class="section-heading mt-30">
                             <h5>Mengenal Lebih Dekat</h5>
-                        </div>
+                            </div>
                                 <ul>
                                     <li><strong>Hobi :</strong></li>
                                     @foreach ($items->detail_pelatih as $item)
@@ -119,13 +117,13 @@
 
                         <!-- Tentang Widget -->
                         <ul class="catagory-widgets">
-                            <li>Tempat/Tgl. Lahir : 35</li>
+                            <li>Tempat/Tgl. Lahir : </li>
                             <br>
                             <li>Email : {{ $items->email }}</li>
                             <br>
                             <li>Tahun Bergabung : {{ $items->tahun_bergabung }}</li>
                             <br>
-                            <li>Bagaimana mengawali karir atletik : -</li>
+                            <li>Bagaimana mengawali karir atletik : </li>
                         </ul>
                     </div>
 
