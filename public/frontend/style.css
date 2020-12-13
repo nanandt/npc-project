@@ -3315,4 +3315,21 @@ textarea.form-control {
   transition: max-height 0.2s ease-out;
 }
 
+/* Gallery */
+.img-area{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-img{
+  padding: 0 4px 4px;
+}
+
+img:hover{
+  opacity: .5;
+  transition: .9s;
+}
 /*# sourceMappingURL=style.css.map */

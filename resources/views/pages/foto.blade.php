@@ -44,46 +44,24 @@
                         <div class="section-heading">
                             <h5>FOTO</h5>
                         </div>
-                        
-                        <table style="cursor: pointer;">
-                            <tr>
-                                @foreach ($items as $gallery)
-                                <td>
-                                    <a href="{{ Storage::url($gallery->foto) }}">
-                                    <img src="{{ Storage::url($gallery->foto) }}" width="215" alt=""></a>
-                                </td>
-                                <td>&nbsp;</td>
-                                @endforeach
-                            </tr>
-                        </table>
 
-                        <br>
+                        <div class="img-area">
+                            @foreach ($items as $gallery)
+                            <a href="{{ Storage::url($gallery->foto) }}">
+                            <div class="single-img"><img src="{{ Storage::url($gallery->foto) }}" width="215" alt=""></div></a>
+                            @endforeach
+                        </div>
 
-                        <table style="cursor: pointer;">
-                            <tr>
-                                @foreach ($items1 as $gallery)
-                                <td>
-                                    <a href="{{ Storage::url($gallery->foto) }}">
-                                    <img src="{{ Storage::url($gallery->foto) }}" width="215" alt=""></a>
-                                </td>
-                                <td>&nbsp;</td>
-                                @endforeach
-                            </tr>
-                        </table>
-
-                        <br>
-
-                        <table style="cursor: pointer;">
-                            <tr>
-                                @foreach ($items2 as $gallery)
-                                <td>
-                                    <a href="{{ Storage::url($gallery->foto) }}">
-                                    <img src="{{ Storage::url($gallery->foto) }}" width="215" alt=""></a>
-                                </td>
-                                <td>&nbsp;</td>
-                                @endforeach
-                            </tr>
-                        </table>
+                        <!-- Pagination -->
+                        <div>
+                            <nav>
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        {{ $items->links('pagination::bootstrap-4') }}
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
 
