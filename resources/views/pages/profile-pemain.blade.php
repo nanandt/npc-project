@@ -127,26 +127,7 @@
                         </ul>
                     </div>
 
-                    <!-- Sidebar Widget -->
-                    <div class="single-sidebar-widget p-30">
-                        <!-- Social Followers Info -->
-                        <div class="social-followers-info">
-                            <!-- Section Title -->
-                            <div class="section-heading">
-                            <h5>Social Media Pemain</h5>
-                        </div>
-                            <!-- Instagram -->
-                            <a href="#" class="instagram-followers"><i class="fa fa-instagram"></i>Instagram</a>
-                            <!-- Facebook -->
-                            <a href="#" class="facebook-fans"><i class="fa fa-facebook"></i>Facebook</a>
-                            <!-- Twitter -->
-                            <a href="#" class="twitter-followers"><i class="fa fa-twitter"></i>Twitter</a>
-                            <!-- YouTube -->
-                            <a href="#" class="youtube-subscribers"><i class="fa fa-youtube"></i>YouTube</a>
-                            <!-- Google -->
-                            <a href="#" class="google-followers"><i class="fa fa-google"></i>Gmail</a>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>

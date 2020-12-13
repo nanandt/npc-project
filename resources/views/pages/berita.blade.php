@@ -54,7 +54,7 @@
                                 <a href="#">{{ $item->created_at->isoFormat('D MMMM Y') }}</a>
                             </div>
                             <a href="{{ route('artikel', $item->slug) }}" class="post-title">{{ $item->title }}</a>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa officia deserunt mollit anim id est laborum. Sed ut perspiciatis lorem150</p>
+                            <p>{!! Str::limit($item->body, 60, '') !!}</p>
                         </div>
                     </div>
                     @endforeach
