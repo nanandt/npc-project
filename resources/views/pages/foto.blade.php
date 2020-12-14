@@ -50,7 +50,7 @@
                                 <td>
                                     <div class="container-overlay">
                                         <a href="{{ route('detail-foto', $cabor->nama_cabor) }}">
-                                        <img src="{{ $cabor->galleries->count() ? Storage::url($cabor->galleries->first()->foto) : '' }}" alt="" width="215">
+                                        <img src="#" alt="" width="215">
                                         <div class="overlay">{{ $cabor->nama_cabor }}</div></a>
                                     </div>
                                 </td>
