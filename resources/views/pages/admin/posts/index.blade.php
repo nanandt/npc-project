@@ -34,7 +34,7 @@ Artikel
               <tr>
                 <td>{{ $item->post_id }}</td>
                 <td>{{ $item->title }}</td>
-                <td>{{ Str::limit($item->body, 60, '') }}</td>
+                <td>{!! Str::limit($item->body, 60, '') !!}</td>
                 <td>
                   <img src="{{ Storage::url($item->photo) }}" style="width:150px"
                     class="img-thumbnail">
@@ -43,7 +43,7 @@ Artikel
                   <a href="{{ route('posts.edit', $item->post_id) }}" class="btn btn-info">
                     <i class="fa fa-pencil-alt"></i>
                   </a>
-                  <form action="{{ route('posts.edit', $item->post_id) }}" method="POST"
+                  <form action="{{ route('posts.destroy', $item->post_id) }}" method="POST"
                     class="d-inline">
                     @csrf
                     @method('delete')

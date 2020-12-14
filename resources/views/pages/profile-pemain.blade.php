@@ -11,10 +11,8 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Cabang Olahraga</li>
-                        <li class="breadcrumb-item active" aria-current="page">Atletik</li>
                         <li class="breadcrumb-item active" aria-current="page">Pemain</li>
-                        <li class="breadcrumb-item active" aria-current="page">Profil</li>
+                        <li class="breadcrumb-item active" aria-current="page">Profil Pemain</li>
                     </ol>
                 </nav>
             </div>
@@ -119,36 +117,17 @@
 
                         <!-- Tentang Widget -->
                         <ul class="catagory-widgets">
-                            <li>Tempat/Tgl. Lahir : 35</li>
+                            <li>Tempat/Tgl. Lahir : </li>
                             <br>
                             <li>Email : {{ $items->email }}</li>
                             <br>
                             <li>Tahun Bergabung : {{ $items->tahun_bergabung }}</li>
                             <br>
-                            <li>Bagaimana mengawali karir atletik : -</li>
+                            <li>Bagaimana mengawali karir atletik : </li>
                         </ul>
                     </div>
 
-                    <!-- Sidebar Widget -->
-                    <div class="single-sidebar-widget p-30">
-                        <!-- Social Followers Info -->
-                        <div class="social-followers-info">
-                            <!-- Section Title -->
-                            <div class="section-heading">
-                            <h5>Social Media Pemain</h5>
-                        </div>
-                            <!-- Instagram -->
-                            <a href="#" class="instagram-followers"><i class="fa fa-instagram"></i>Instagram</a>
-                            <!-- Facebook -->
-                            <a href="#" class="facebook-fans"><i class="fa fa-facebook"></i>Facebook</a>
-                            <!-- Twitter -->
-                            <a href="#" class="twitter-followers"><i class="fa fa-twitter"></i>Twitter</a>
-                            <!-- YouTube -->
-                            <a href="#" class="youtube-subscribers"><i class="fa fa-youtube"></i>YouTube</a>
-                            <!-- Google -->
-                            <a href="#" class="google-followers"><i class="fa fa-google"></i>Gmail</a>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>

@@ -44,6 +44,7 @@
                         <div class="section-heading">
                             <h5>FOTO</h5>
                         </div>
+<<<<<<< HEAD
                         <table style="cursor: pointer;">
                             <tr>
                                 @foreach ($cabors as $cabor)
@@ -56,49 +57,31 @@
                                 </td>
                                 <td>&nbsp;</td>
                                 @endforeach
+=======
+>>>>>>> 382111bc0cc5702afde1c67f6cdd7b9cfff76aab
 
-                                {{-- @foreach ($items as $item)
-                                  <td>
-                                    <div class="container-overlay">
-                                        <a href="#">
-                                        <img src="{{ $item->galleries->count() ? Storage::url($item->galleries->first()->foto) : '' }}" alt="" width="215">
-                                        <div class="overlay">{{ $item->nama_cabor }}</div></a>
-                                    </div>
-                                </td>
+                        <div class="img-area">
+                            @foreach ($items as $gallery)
+                            <a href="{{ Storage::url($gallery->foto) }}">
+                            <div class="single-img"><img src="{{ Storage::url($gallery->foto) }}" width="215" alt=""></div></a>
+                            @endforeach
+                        </div>
 
-                                <td>&nbsp;</td>
-                                @endforeach --}}
-
-
-                                {{-- <td>
-                                    <div class="container-overlay">
-                                        <a href="#">
-                                        <img src="{{ url('frontend/img/core-img/logo_png.png') }}" alt="" width="215">
-                                        <div class="overlay">Bulu Tangkis</div></a>
-                                    </div>
-                                </td> --}}
-                            </tr>
-                        </table>
-
-                        <table style="cursor: pointer;">
-                            <tr>
-                                @foreach ($items as $item)
-                                  <td>
-                                    <div class="container-overlay">
-                                        <a href="{{ route('detail-foto', $item->nama_cabor) }}">
-                                        <img src="{{ $item->galleries->count() ? Storage::url($item->galleries->first()->foto) : '' }}" alt="" width="215">
-                                        <div class="overlay">{{ $item->nama_cabor }}</div></a>
-                                    </div>
-                                </td>
-                                <td>&nbsp;</td>
-                                @endforeach
-                            </tr>
-                        </table>
+                        <!-- Pagination -->
+                        <div>
+                            <nav>
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        {{ $items->links('pagination::bootstrap-4') }}
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
 
                     <!-- >>>>>>>>>>>>>>>>>>>>
-                     Post Right Sidebar Area
+                    Post Right Sidebar Area
                     <<<<<<<<<<<<<<<<<<<<< -->
                     <div class="post-sidebar-area right-sidebar mt-10 mb-30 box-shadow">
                         <!-- Sidebar Widget -->
@@ -118,6 +101,7 @@
                             </div>
                         </div>
                     </div>
+            </div>
         </section>
     <!-- ##### About Us Area End ##### -->
 
