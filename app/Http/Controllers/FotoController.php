@@ -12,16 +12,12 @@ class FotoController extends Controller
     {
         $cabors = CabangOlahraga::with(['pemains', 'pelatihs'])->get();
         
-        $items = Photo::latest()->take(3)->get();
-        $items1 = Photo::take(3)->get();
-        $items2 = Photo::skip(3)->take(3)->get();
+        $items = Photo::latest()->paginate(12);
         
         
         return view('pages.foto', [
             'cabors' => $cabors,
-            'items' => $items,
-            'items1' => $items1,
-            'items2' => $items2
+            'items' => $items
         ]);
     }
 }
