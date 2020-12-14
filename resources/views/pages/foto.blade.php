@@ -44,26 +44,11 @@
                         <div class="section-heading">
                             <h5>FOTO</h5>
                         </div>
-<<<<<<< HEAD
-                        <table style="cursor: pointer;">
-                            <tr>
-                                @foreach ($cabors as $cabor)
-                                <td>
-                                    <div class="container-overlay">
-                                        <a href="{{ route('detail-foto', $cabor->nama_cabor) }}">
-                                        <img src="#" alt="" width="215">
-                                        <div class="overlay">{{ $cabor->nama_cabor }}</div></a>
-                                    </div>
-                                </td>
-                                <td>&nbsp;</td>
-                                @endforeach
-=======
->>>>>>> 382111bc0cc5702afde1c67f6cdd7b9cfff76aab
 
                         <div class="img-area">
                             @foreach ($items as $gallery)
                             <a href="{{ Storage::url($gallery->foto) }}">
-                            <div class="single-img"><img src="{{ Storage::url($gallery->foto) }}" width="215" alt=""></div></a>
+                            <div class="single-img mb-2"><img src="{{ Storage::url($gallery->foto) }}" width="215" alt=""></div></a>
                             @endforeach
                         </div>
 
