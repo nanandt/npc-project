@@ -1,5 +1,7 @@
 @extends('layouts.admin')
-@section('title', 'Video')
+@section('title')
+Video
+@endsection
 
 @section('content')
                 <!-- Begin Page Content -->
