@@ -212,7 +212,7 @@
         <div class="most-viewed-videos mb-30">
             <!-- Section Title -->
             <div class="section-heading">
-                <a href="foto.html"><h5>FOTO TERBARU</h5></a>
+                <a href="{{ route('foto') }}"><h5>FOTO TERBARU</h5></a>
             </div>
 
             <div class="most-viewed-videos-slide owl-carousel">
@@ -221,8 +221,8 @@
                 <!-- Single Blog Post -->
                 <div class="single-blog-post style-4">
                     <div class="post-thumbnail">
-                        <a href="foto.html"><img src="{{ Storage::url($item->foto) }}" style="height: 150px;
-                                                                                                width: 200px;"></a>
+                        <a href="{{ Storage::url($item->foto) }}" data-lightbox="roadtrip">
+                        <img src="{{ Storage::url($item->foto) }}" style=" height: 200px; width: 250px;"></a>
                     </div>
                 </div>
                 @endforeach
@@ -241,7 +241,7 @@
         <div class="sports-videos-area">
             <!-- Section Title -->
             <div class="section-heading">
-                <a href="video.html"><h5>VIDEO TERBARU</h5></a>
+                <a href="{{ route('video') }}"><h5>VIDEO TERBARU</h5></a>
             </div>
 
             <div class="sports-videos-slides owl-carousel mb-30">
@@ -252,7 +252,7 @@
                     <!-- Thumbnail -->
                     <div class="post-thumbnail mb-50">
                         <video width="550" controls>
-                        <source src="{{ Storage::url($item->video) }}" type="video/mp4">
+                        <source src="{{ Storage::url($item->video) }}">
                     </video>
                     </div>
                 </div>

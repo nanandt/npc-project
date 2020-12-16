@@ -23,12 +23,14 @@ class HomeController extends Controller
 
         $items = Post::latest()->limit(5)->get();
         $photos = Photo::all();
+        $videos = Video::all();
         return view('pages.home', [
             'cabors' => $cabors,
             'lates' => $lates,
             'randoms' => $randoms,
             'items' => $items,
-            'photos' => $photos
+            'photos' => $photos,
+            'videos' => $videos
         ]);
     }
 }
