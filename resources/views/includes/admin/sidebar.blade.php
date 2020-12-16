@@ -49,11 +49,11 @@
       <i class="fas fa-fw fa-camera"></i>
       <span>Foto</span></a>
   </li>
-  {{-- <li class="nav-item">
-    <a class="nav-link" href="{{ route('videos.index') }}">
-      <i class="fas fa-fw fa-video"></i>
+  <li class="nav-item  {{ request()->is('admin/video*') ? ' active' : '' }}">
+    <a class="nav-link" href="{{ route('video.index') }}">
+      <i class="fas fa-fw fa-camera"></i>
       <span>Video</span></a>
-  </li> --}}
+  </li>
 
   <!-- Divider -->
   <hr class="sidebar-divider d-none d-md-block">

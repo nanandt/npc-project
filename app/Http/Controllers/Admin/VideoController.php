@@ -3,12 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Photo;
 use Illuminate\Http\Request;
+use App\Video;
 use RealRashid\SweetAlert\Facades\Alert;
 
-
-class FotoController extends Controller
+class VideoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +16,8 @@ class FotoController extends Controller
      */
     public function index()
     {
-        $items = Photo::all();
-        return view('pages.admin.photos.index', compact('items'));
+        $items = Video::all();
+        return view('pages.admin.video.index', compact('items'));
     }
 
     /**
@@ -28,7 +27,7 @@ class FotoController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.photos.create');
+        return view('pages.admin.video.create');
     }
 
     /**
@@ -40,16 +39,16 @@ class FotoController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'foto' => 'required|mimes:jpg,jpeg,png,svg|max:2048'
+            'video' => 'required|mimes:mp4,mpg,mpeg,mov,avi,flv,wmv|max:30048'
         ]);
 
-        $data['foto'] = $request->file('foto')->store('assets/foto', 'public');
+        $data['video'] = $request->file('video')->store('assets/video', 'public');
 
-        Photo::create($data);
+        Video::create($data);
 
         Alert::success('Selamat', 'Data Berhasil Ditambahkan');
 
-        return redirect()->route('photos.index');
+        return redirect()->route('video.index');
     }
 
     /**
@@ -71,8 +70,8 @@ class FotoController extends Controller
      */
     public function edit($id)
     {
-        $item = Photo::findOrFail($id);
-        return view('pages.admin.photos.edit', compact('item'));
+        $item = Video::findOrFail($id);
+        return view('pages.admin.video.edit', compact('item'));
     }
 
     /**
@@ -84,19 +83,7 @@ class FotoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = $request->validate([
-            'foto' => 'required|mimes:jpg,jpeg,png,svg|max:2048'
-        ]);
-        $data['foto'] = $request->file('foto')->store('assets/foto', 'public');
-
-        $item = Photo::findOrFail($id);
-
-        $item->update($data);
-
-        Alert::success('Selamat', 'Data Berhasil Ditambahkan');
-
-        return redirect()->route('photos.index');
-
+        //
     }
 
     /**
@@ -107,12 +94,17 @@ class FotoController extends Controller
      */
     public function destroy($id)
     {
-        $item = Photo::findOrFail($id);
+        $data = $request->validate([
+            'video' => 'required|mimes:mp4,mpg,mpeg,mov,avi,flv,wmv|max:30048'
+        ]);
+        $data['video'] = $request->file('video')->store('assets/video', 'public');
 
-        $item->delete();
+        $item = Video::findOrFail($id);
+
+        $item->update($data);
 
         Alert::success('Selamat', 'Data Berhasil Dihapus');
 
-        return redirect()->route('photos.index');
+        return redirect()->route('video.index');
     }
 }

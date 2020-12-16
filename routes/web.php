@@ -72,6 +72,7 @@ Route::prefix('admin')
         Route::resource('players', PlayerController::class);
         Route::resource('coachs', CoachController::class);
         Route::resource('photos', FotoController::class);
+        Route::resource('video', VideoController::class);
 });
 
 Auth::routes();
