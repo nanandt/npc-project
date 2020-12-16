@@ -3,7 +3,7 @@
 
 @section('content')
 <!-- ##### Breadcrumb Area Start ##### -->
-    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/49.jpg);">
+    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url({{ 'frontend/img/bg-img/logo_png.jpg' }});">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -44,10 +44,13 @@
                         <div class="section-heading">
                             <h5>FOTO</h5>
                         </div>
+                        
                         <div class="img-area">
                             @foreach ($items as $gallery)
-                            <a href="{{ Storage::url($gallery->foto) }}">
-                            <div class="single-img mb-2"><img src="{{ Storage::url($gallery->foto) }}" width="215" alt=""></div></a>
+                            <a href="{{ Storage::url($gallery->foto) }}" data-lightbox="roadtrip">
+                            <div class="single-img mb-2">
+                                <img src="{{ Storage::url($gallery->foto) }}" width="215" alt="">
+                            </div></a>
                             @endforeach
                         </div>
 

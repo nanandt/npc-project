@@ -33,7 +33,7 @@
                                             <td>{{ $item->id }}</td>
                                             <td>
                                                 <video style="max-width: 200px" controls>
-                                                    <source src="{{ Storage::url($item->video) }}" type="video/mp4">
+                                                    <source src="{{ Storage::url($item->video) }}">
                                                 </video>
                                             </td>
 

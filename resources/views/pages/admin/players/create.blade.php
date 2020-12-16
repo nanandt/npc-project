@@ -1,4 +1,5 @@
 @extends('layouts.admin')
+@section('title', 'Pemain')
 
 @section('content')
 <!-- Begin Page Content -->
