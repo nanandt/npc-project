@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\{CabangOlahraga, Gallery, Photo, Post};
+use App\{CabangOlahraga, Gallery, Photo, Post, Video};
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
