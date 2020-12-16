@@ -15,8 +15,9 @@ class CreateVideosTable extends Migration
     {
         Schema::create('videos', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('cabang_olahraga_id');
             $table->string('video');
+
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -47,7 +47,7 @@
                         <div class="img-area">
                             @foreach ($items as $gallery)
                             <a href="{{ Storage::url($gallery->foto) }}">
-                            <div class="single-img"><img src="{{ Storage::url($gallery->foto) }}" width="215" alt=""></div></a>
+                            <div class="single-img mb-2"><img src="{{ Storage::url($gallery->foto) }}" width="215" alt=""></div></a>
                             @endforeach
                         </div>
 

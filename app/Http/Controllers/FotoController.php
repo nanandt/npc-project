@@ -13,8 +13,6 @@ class FotoController extends Controller
         $cabors = CabangOlahraga::with(['pemains', 'pelatihs'])->get();
 
         $items = Photo::latest()->paginate(12);
-
-
         return view('pages.foto', [
             'cabors' => $cabors,
             'items' => $items
