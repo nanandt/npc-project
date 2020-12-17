@@ -19,10 +19,10 @@
                     <!-- Single Blog Post -->
                     <div class="footer-social-info">
                         <a href="https://www.instagram.com/npcikabupatenbekasi/" target="_blank" rel="nofollow"><i class="fa fa-instagram"></i></a>
-                        <a href="#" target="_blank" rel="nofollow" class="facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" target="_blank" rel="nofollow" class="twitter"><i class="fa fa-twitter"></i></a>
-                        <a href="#" target="_blank" rel="nofollow" class="youtube"><i class="fa fa-youtube"></i></a>
-                        <a href="#" target="_blank" rel="nofollow" class="google-plus"><i class="fa fa-google"></i></a>
+                        <a href="https://www.facebook.com/NPC-Kabupaten-Bekasi-106726301325019" target="_blank" rel="nofollow" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/NPCIKabBekasi" target="_blank" rel="nofollow" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/channel/UCLpp840IBTVFUbzVr2L5Nyw?guided_help_flow=5" target="_blank" rel="nofollow" class="youtube"><i class="fa fa-youtube"></i></a>
+                        <a href="mailto:npckabupatenbekasi@gmail.com" target="_blank" rel="nofollow" class="google-plus"><i class="fa fa-google"></i></a>
                     </div>
                 </div>
             </div>

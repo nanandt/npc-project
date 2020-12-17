@@ -70,7 +70,7 @@
                             </div>
                             <div class="text">
                                 <p>Email:</p>
-                                <a href="mailto:#?" target="_blank" rel="nofollow">@gmail.com</a>
+                                <a href="mailto:npckabupatenbekasi@gmail.com?" target="_blank" rel="nofollow">npckabupatenbekasi@gmail.com</a>
                             </div>
                         </div>
 
