@@ -212,7 +212,7 @@
         <div class="most-viewed-videos mb-30">
             <!-- Section Title -->
             <div class="section-heading">
-                <a href="foto.html"><h5>FOTO TERBARU</h5></a>
+                <a href="{{ route('foto') }}"><h5>FOTO TERBARU</h5></a>
             </div>
 
             <div class="most-viewed-videos-slide owl-carousel">
@@ -221,8 +221,8 @@
                 <!-- Single Blog Post -->
                 <div class="single-blog-post style-4">
                     <div class="post-thumbnail">
-                        <a href="foto.html"><img src="{{ Storage::url($item->foto) }}" style="height: 150px;
-                                                                                                width: 200px;"></a>
+                        <a href="{{ Storage::url($item->foto) }}" data-lightbox="roadtrip">
+                        <img src="{{ Storage::url($item->foto) }}" style=" height: 200px; width: 250px;"></a>
                     </div>
                 </div>
                 @endforeach
@@ -241,7 +241,7 @@
         <div class="sports-videos-area">
             <!-- Section Title -->
             <div class="section-heading">
-                <a href="video.html"><h5>VIDEO TERBARU</h5></a>
+                <a href="{{ route('video') }}"><h5>VIDEO TERBARU</h5></a>
             </div>
 
             <div class="sports-videos-slides owl-carousel mb-30">
@@ -252,7 +252,7 @@
                     <!-- Thumbnail -->
                     <div class="post-thumbnail mb-50">
                         <video width="550" controls>
-                        <source src="{{ Storage::url($item->video) }}" type="video/mp4">
+                        <source src="{{ Storage::url($item->video) }}">
                     </video>
                     </div>
                 </div>
@@ -279,13 +279,13 @@
                 <!-- Instagram -->
                 <a href="https://www.instagram.com/npcikabupatenbekasi/" target="_blank" rel="nofollow" class="instagram-followers"><i class="fa fa-instagram"></i>Instagram</a>
                 <!-- Facebook -->
-                <a href="#" target="_blank" rel="nofollow" class="facebook-fans"><i class="fa fa-facebook"></i>Facebook</a>
+                <a href="https://www.facebook.com/NPC-Kabupaten-Bekasi-106726301325019" target="_blank" rel="nofollow" class="facebook-fans"><i class="fa fa-facebook"></i>Facebook</a>
                 <!-- Twitter -->
-                <a href="#" target="_blank" rel="nofollow" class="twitter-followers"><i class="fa fa-twitter"></i>Twitter</a>
+                <a href="https://twitter.com/NPCIKabBekasi" target="_blank" rel="nofollow" class="twitter-followers"><i class="fa fa-twitter"></i>Twitter</a>
                 <!-- YouTube -->
-                <a href="#" target="_blank" rel="nofollow" class="youtube-subscribers"><i class="fa fa-youtube"></i>YouTube</a>
+                <a href="https://www.youtube.com/channel/UCLpp840IBTVFUbzVr2L5Nyw?guided_help_flow=5" target="_blank" rel="nofollow" class="youtube-subscribers"><i class="fa fa-youtube"></i>YouTube</a>
                 <!-- Google -->
-                <a href="mailto:#?" target="_blank" rel="nofollow" class="google-followers"><i class="fa fa-google"></i>Gmail</a>
+                <a href="mailto:npckabupatenbekasi@gmail.com?" target="_blank" rel="nofollow" class="google-followers"><i class="fa fa-google"></i>Gmail</a>
             </div>
         </div>
     </div>

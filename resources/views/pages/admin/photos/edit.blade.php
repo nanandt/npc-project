@@ -1,4 +1,5 @@
 @extends('layouts.admin')
+@section('title', 'Foto')
 
 @section('content')
 <div class="container-fluid">

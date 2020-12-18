@@ -39,7 +39,7 @@ class VideoController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'video' => 'required|mimes:mp4,mpg,mpeg,mov,avi,flv,wmv|max:30048'
+            'video' => 'required|mimes:mp4,mpg,mpeg,mov,avi,flv,wmv|max:5000048'
         ]);
 
         $data['video'] = $request->file('video')->store('assets/video', 'public');
@@ -83,7 +83,18 @@ class VideoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->validate([
+            'video' => 'required|mimes:mp4,mpg,mpeg,mov,avi,flv,wmv|max:5000048'
+        ]);
+        $data['video'] = $request->file('video')->store('assets/video', 'public');
+
+        $item = Video::findOrFail($id);
+
+        $item->update($data);
+
+        Alert::success('Selamat', 'Data Berhasil Dihapus');
+
+        return redirect()->route('video.index');
     }
 
     /**
@@ -94,14 +105,9 @@ class VideoController extends Controller
      */
     public function destroy($id)
     {
-        $data = $request->validate([
-            'video' => 'required|mimes:mp4,mpg,mpeg,mov,avi,flv,wmv|max:30048'
-        ]);
-        $data['video'] = $request->file('video')->store('assets/video', 'public');
-
         $item = Video::findOrFail($id);
 
-        $item->update($data);
+        $item->delete();
 
         Alert::success('Selamat', 'Data Berhasil Dihapus');
 

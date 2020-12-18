@@ -9,3 +9,5 @@
 <script src="{{ url('frontend/js/plugins/plugins.js') }}"></script>
 <!-- Active js -->
 <script src="{{ url('frontend/js/active.js') }}"></script>
+<!-- Active js -->
+<script src="{{ url('frontend/js/lightbox.js') }}"></script>

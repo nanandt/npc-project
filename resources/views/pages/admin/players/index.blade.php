@@ -1,7 +1,6 @@
 @extends('layouts.admin')
-@section('title')
-Pemain
-@endsection
+@section('title', 'Pemain')
+
 @section('content')
 <!-- Begin Page Content -->
     <div class="container-fluid">
