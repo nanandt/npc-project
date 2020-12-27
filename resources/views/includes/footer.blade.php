@@ -34,10 +34,18 @@
         <div class="container">
             <div class="row">
                 <!-- Copywrite Text -->
-                <div class="col-12 text-md-center text-left">
+                <div class="col-12 col-sm-6">
                     <p class="copywrite-text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         Copyright &copy;<script>document.write(new Date().getFullYear());</script> National Paralympic Committee of Indonesia | All rights reserved
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <nav class="footer-nav">
+                        <ul>
+                            <li><a href="{{ route('terms-conditions') }}">Terms & Conditions</a></li>
+                            <li><a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>

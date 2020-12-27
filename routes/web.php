@@ -57,6 +57,11 @@ Route::get('/', 'HomeController@index')
     Route::get('/berita', 'BeritaController@index')
         ->name('berita');
 
+    Route::get('/privacy-policy', 'PrivacypolicyController@index')
+        ->name('privacy-policy');
+
+    Route::get('/terms-&-conditions', 'TermsController@index')
+        ->name('terms-conditions');
 
 
 Route::prefix('admin')
