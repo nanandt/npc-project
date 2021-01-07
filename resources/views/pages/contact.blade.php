@@ -2,6 +2,10 @@
 
 @section('title', 'Contact')
 
+@section('scripts-reCAPTCHA')
+{!! NoCaptcha::renderJs() !!}
+@stop
+
 @section('content')
 <!-- ##### Breadcrumb Area Start ##### -->
 <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url({{ 'frontend/img/bg-img/logo_png.jpg' }});">
@@ -110,6 +114,15 @@
                                     <div class="form-group">
                                         <textarea name="pesan" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
                                     </div>
+                                </div>
+                                <div class="col-12">
+                                    {!! NoCaptcha::display() !!}
+
+                                    @error ('g-recaptcha-response')
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                                 <div class="col-12">
                                     <button class="btn mag-btn mt-30" type="submit">Send</button>

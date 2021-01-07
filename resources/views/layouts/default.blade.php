@@ -23,6 +23,8 @@
 
     @yield('content')
 
+    @yield('scripts-reCAPTCHA')
+
     @include('includes.footer')
 
 
