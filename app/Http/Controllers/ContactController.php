@@ -18,10 +18,12 @@ class ContactController extends Controller
 
     public function create(Request $request)
     {
-      $data = $request->all();
+        $data = $request->validate([
+            'g-recaptcha-response' => 'required|captcha'
+    ]);
 
-      Message::create($data);
+        Message::create($data);
 
-      return redirect()->route('contact');
+        return redirect()->route('contact');
     }
 }
