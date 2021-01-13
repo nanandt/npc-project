@@ -54,11 +54,19 @@
                             {!! $item->body !!}
                         </p>
 
-                        <!-- Like Dislike Share -->
-                        <div class="like-dislike-share my-5">
-                            <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a>
-                            <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Share on Twitter</a>
+                        <!-- AddToAny BEGIN -->
+                        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                            <a class="a2a_button_facebook"></a>
+                            <a class="a2a_button_twitter"></a>
+                            <a class="a2a_button_email"></a>
+                            <a class="a2a_button_pinterest"></a>
+                            <a class="a2a_button_tumblr"></a>
+                            <a class="a2a_button_whatsapp"></a>
+                            <a class="a2a_button_telegram"></a>
+                            <a class="a2a_button_copy_link"></a>
                         </div>
+                        <!-- AddToAny END -->
+
                     </div>
                 </div>
             </div>
