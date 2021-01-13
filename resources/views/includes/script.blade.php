@@ -11,3 +11,5 @@
 <script src="{{ url('frontend/js/active.js') }}"></script>
 <!-- Active js -->
 <script src="{{ url('frontend/js/lightbox.js') }}"></script>
+{{-- Script Medsos --}}
+<script async src="https://static.addtoany.com/menu/page.js"></script>
